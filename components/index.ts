@@ -2,7 +2,7 @@ import * as Icon from './icons'
 import * as Layout from "./layout";
 import * as Motion from "./Motion";
 import * as Container from "./Container";
-// import * as Button from "./Button";
+import * as Button from "./Button";
 
 import Toggle from './Toggle';
 import Field from './Field/index';
@@ -37,7 +37,7 @@ export {
   ProjectList,
   RecordCard,
   Pointer,
-  // Button,
+  Button,
   GetInTouchForm,
   Icon,
   Field,

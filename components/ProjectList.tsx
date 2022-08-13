@@ -1,5 +1,5 @@
 import { memo } from "react"
-import { ProjectCard, Motion, Loading } from "@/components";
+import { ProjectCard, Motion, Loading, Button } from "@/components";
 import { useState } from "react";
 
 const ProjectList = () => {
@@ -26,10 +26,9 @@ const ProjectList = () => {
           <Loading />
         )
         : (
-          // <Button.Primary onClick={fetchProject} variant="text">
-          //   Load More
-          // </Button.Primary>
-          null
+          <Button.Primary onClick={fetchProject} variant="text">
+            Load More
+          </Button.Primary>
         )}
     </>
   )
