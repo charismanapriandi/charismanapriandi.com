@@ -9,8 +9,10 @@ import Grid from "./Grid";
 import List from "./List";
 import Logo from "./Logo";
 import Github from "./Github";
+import Download from "./Download";
 
 export {
+  Download,
   Github,
   Logo,
   List,

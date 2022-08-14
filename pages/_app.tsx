@@ -4,11 +4,14 @@ import { darkTheme, theme } from 'config/theme'
 import ColorSchemeProvider, { ColorSchemeContext } from 'context/ColorScheme'
 import { FC, useContext } from 'react'
 import globalStyles from 'styles/global'
+import AuthContextProvider from 'context/AuthContext'
 
 function App(props: AppProps) {
   return (
     <ColorSchemeProvider>
-      <ThemeController {...props}/>
+      <AuthContextProvider>
+        <ThemeController {...props}/>
+      </AuthContextProvider>
     </ColorSchemeProvider>
   )
 }

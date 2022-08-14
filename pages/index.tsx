@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import type { NextPage } from 'next'
-import { GetInTouchForm, Layout, ProjectList, RecordCard, TechnologyList, Text } from '@/components'
+import { Button, GetInTouchForm, Icon, Layout, ProjectList, RecordCard, TechnologyList, Text } from '@/components'
 import { css } from '@emotion/react'
 
 const text = {
@@ -18,6 +18,9 @@ const Home: NextPage = () => {
         <Text css={{maxWidth: '800px', marginTop: '30px', wordSpacing: '3px'}}>
           {text.description}
         </Text>
+        <Button.Primary css={{marginTop: '20px'}}>
+          <Icon.Download css={{marginRight: '20px', color: '#FFFFFF'}} size={24} /> Curriculum Vitae
+        </Button.Primary>
       </div>
       <div css={sectionCss}>
         <RecordCard experienceCount={10} projectCount={100} />

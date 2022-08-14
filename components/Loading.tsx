@@ -21,8 +21,8 @@ const containerCss = css({
   display: 'flex', 
   alignItems: 'center', 
   gap: '10px',
-  padding: '20px 0',
-  justifyContent: 'center'
+  justifyContent: 'center',
+  paddingBottom: '10px'
 })
 
 const Circle = styled(motion.span)(({theme}) => ({

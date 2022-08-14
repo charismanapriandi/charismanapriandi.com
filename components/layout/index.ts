@@ -1,3 +1,7 @@
 import Primary from "./Primary";
+import Auth from './Auth'
 
-export {Primary}
+export {
+  Primary,
+  Auth
+}

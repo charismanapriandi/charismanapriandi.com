@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion-icons/bootstrap": "^3.27.0",
     "@emotion-icons/evil": "^3.14.0",
     "@emotion-icons/feather": "^3.14.0",
     "@emotion-icons/ionicons-outline": "^3.14.0",

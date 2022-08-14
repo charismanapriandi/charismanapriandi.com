@@ -4,4 +4,8 @@ declare namespace FormSchema {
     email: string;
     message: string;
   }
+  export interface Login {
+    username: string;
+    password: string;
+  }
 }

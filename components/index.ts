@@ -6,7 +6,7 @@ import * as Button from "./Button";
 
 import Toggle from './Toggle';
 import Field from './Field/index';
-import Form from './Form/Item';
+import Form from './Form';
 import GetInTouchForm from "./GetInTouchForm";
 
 import Divider from "./Divider";
@@ -27,8 +27,12 @@ import TechnologyCard from "./TechnologyCard";
 import Tag from "./Tag";
 import Loading from "./Loading";
 import Footer from './Footer';
+import LoginForm from './LoginForm';
+import Brand from './Brand';
 
 export {
+  Brand,
+  LoginForm,
   Footer,
   Motion,
   Loading,

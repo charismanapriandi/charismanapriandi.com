@@ -8,7 +8,7 @@ const Primary = styled(Default)(({theme, variant = 'contained'}) => ({
     || variant === 'contained' ? theme.palette.color.primary : '',
   color: 
     variant === 'text' ? theme.palette.text.highlight : ''
-    || variant === 'contained' ? theme.palette.background.primary : '',
+    || variant === 'contained' ? '#FFFFFF' : '',
 }))
 
 Primary.displayName = 'ButtonPrimary'
