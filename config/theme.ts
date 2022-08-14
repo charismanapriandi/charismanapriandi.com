@@ -3,21 +3,24 @@ import { Theme } from "@emotion/react";
 export const theme: Theme = {
   palette: {
     color: {
-      primary: '#3847D0',
-      secondary: '#4FA8F6',
-      border: '#E1E1E9',
-      error: '#FB3F3D',
+      primary: '#3481EF',
+      secondary: '#FB4E00',
+      border: '#A0A0A0',
+      error: '#FB4E00',
       success: '#17D386'
     },
     background: {
-      primary: '#FFFFFF',
-      secondary: '#FAFAFF',
+      primary: '#F6F6F6',
+      secondary: '#FDFDFD',
     },
     text: {
-      primary: '#393B4B',
-      secondary: '#62646D',
-      highlight: '#3847D0'
+      primary: '#000000',
+      secondary: '#979797',
+      highlight: '#3481EF'
     }
+  },
+  boxShadow: {
+    sm: 'rgba(0, 0, 0, 0.04) 0px 3px 5px'
   },
   font: {
     family: {
@@ -36,7 +39,7 @@ export const darkTheme: Theme = {
   palette: {
     color: {
       primary: '#3F8AF9', //
-      secondary: '#4FA8F6',
+      secondary: '#4FA8F6', //
       border: '#363B3F', //
       error: '#FC6474', //
       success: '#24D073', //
@@ -50,6 +53,9 @@ export const darkTheme: Theme = {
       secondary: '#9298A5', //
       highlight: '#3F8AF9', //
     }
+  },
+  boxShadow: {
+    sm: 'rgba(0, 0, 0, 0.04) 0px 3px 5px'
   },
   font: {
     family: {

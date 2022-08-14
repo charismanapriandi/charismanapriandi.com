@@ -30,7 +30,7 @@ const ThemeSwitcher = () => {
   )
 }
 
-const CustomSwitch = styled(Toggle)(({theme}) => ({
+const CustomSwitch = styled(Toggle)(({theme, isOn}) => ({
   backgroundColor: theme.palette.color.primary
 }))
 

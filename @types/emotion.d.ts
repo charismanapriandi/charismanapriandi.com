@@ -19,7 +19,10 @@ declare module '@emotion/react' {
         secondary: string;
         highlight: string;
       }
-    },
+    };
+    boxShadow: {
+      sm: string;
+    };
     font: {
       family: {
         poppins: string;

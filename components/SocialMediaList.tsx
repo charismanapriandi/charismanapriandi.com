@@ -24,6 +24,12 @@ const SocialMediaList = () => {
           <Text css={{marginLeft: '10px'}}>Instagram</Text>
         </motion.div>
       </IconContainerMotion>
+      <IconContainerMotion initial='inactive' animate='inactive' whileHover='active'>
+        <Icon.Linkedin size={30}/>
+        <motion.div layout transition={{type: 'tween'}} variants={(iconTextVariant as any)}>
+          <Text css={{marginLeft: '10px'}}>Linkedin</Text>
+        </motion.div>
+      </IconContainerMotion>
     </div>
   )
 }

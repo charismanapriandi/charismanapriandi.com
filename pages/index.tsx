@@ -10,7 +10,7 @@ const text = {
 
 const Home: NextPage = () => {
   return (
-    <Layout.Primary>
+    <Layout.Primary isPaddingTop={false}>
       <div css={heroCss}>
         <Text css={{maxWidth: '800px'}} as='h1'>
           {text.title}
