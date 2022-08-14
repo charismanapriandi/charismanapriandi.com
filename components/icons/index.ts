@@ -8,8 +8,10 @@ import Linkedin from "./Linkedin";
 import Grid from "./Grid";
 import List from "./List";
 import Logo from "./Logo";
+import Github from "./Github";
 
 export {
+  Github,
   Logo,
   List,
   Menu,

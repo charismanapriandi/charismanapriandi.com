@@ -1,6 +1,6 @@
-import { Container } from "@/components";
+import { Container, Navbar, Footer } from "@/components";
+import { css } from "@emotion/react";
 import { FC, memo, ReactNode } from "react";
-import Navbar from "../Navbar";
 
 interface LayoutProps {
   children: ReactNode;
@@ -8,13 +8,20 @@ interface LayoutProps {
 }
 
 const Primary: FC<LayoutProps> = ({children, isPaddingTop = true}) => (
-  <div>
+  <div css={layoutCss}>
     <Navbar />
-    <Container.Default css={{paddingTop: isPaddingTop ? '100px' : 0}}>
+    <Container.Default css={{paddingTop: isPaddingTop ? '100px' : 0, flex: 1}}>
       {children}
     </Container.Default>
+    <Footer />
   </div>
 )
+
+const layoutCss = css({
+  display: 'flex',
+  flexDirection: 'column',
+  minHeight: '100vh',
+})
 
 Primary.displayName = 'LayoutPrimary'
 

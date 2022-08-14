@@ -26,8 +26,10 @@ import RecordCard from "./RecordCard";
 import TechnologyCard from "./TechnologyCard";
 import Tag from "./Tag";
 import Loading from "./Loading";
+import Footer from './Footer';
 
 export {
+  Footer,
   Motion,
   Loading,
   Form,
