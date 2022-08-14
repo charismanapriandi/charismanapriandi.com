@@ -14,7 +14,7 @@ export const theme: Theme = {
       secondary: '#FDFDFD',
     },
     text: {
-      primary: '#000000',
+      primary: '#393939',
       secondary: '#979797',
       highlight: '#3481EF'
     }
@@ -38,20 +38,20 @@ export const theme: Theme = {
 export const darkTheme: Theme = {
   palette: {
     color: {
-      primary: '#3F8AF9', //
-      secondary: '#4FA8F6', //
-      border: '#363B3F', //
-      error: '#FC6474', //
-      success: '#24D073', //
+      primary: '#3F8AF9',
+      secondary: '#4FA8F6',
+      border: '#363B3F',
+      error: '#FC6474',
+      success: '#24D073',
     },
     background: {
-      primary: '#1A1C1E', //
-      secondary: '#282A2E', //
+      primary: '#1A1C1E',
+      secondary: '#282A2E',
     },
     text: {
-      primary: '#FFFFFF', //
-      secondary: '#9298A5', //
-      highlight: '#3F8AF9', //
+      primary: '#FFFFFF',
+      secondary: '#9298A5',
+      highlight: '#3F8AF9',
     }
   },
   boxShadow: {
