@@ -32,7 +32,10 @@ const Navbar = () => {
           </Menu> */}
           <Row alignItems='center' justifyContent='space-between'>
             <Link href='/'>
-              <Text weight={500} color='primary'>Charisman Apriandi</Text>
+              <a css={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+                <Icon.Logo size={35}/>
+                <Text weight={500} color='primary'>Charisman Apriandi</Text>
+              </a>
             </Link>
             <ThemeSwitcher />
             {/* <Icon.Menu css={{cursor: 'pointer'}} onClick={handleExpand} /> */}

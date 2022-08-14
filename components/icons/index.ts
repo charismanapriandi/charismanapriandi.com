@@ -7,8 +7,10 @@ import Moon from "./Moon";
 import Linkedin from "./Linkedin";
 import Grid from "./Grid";
 import List from "./List";
+import Logo from "./Logo";
 
 export {
+  Logo,
   List,
   Menu,
   Instagram, 
