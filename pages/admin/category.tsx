@@ -1,4 +1,4 @@
-import { Button, Icon, Layout, Row, Table } from "@/components"
+import { Button, Icon, Layout, Modal, Row, Table } from "@/components"
 import withProtect from "hoc/withProtect"
 
 const rows = [
@@ -45,6 +45,60 @@ const Category = () => {
           ))}
         </Table.Body>
       </Table>
+      <Modal isOpen={true}>
+        <Modal.Card>
+          <Modal.Header>
+            modal
+          </Modal.Header>
+          <Modal.Body>
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+            sss<br />
+          </Modal.Body>
+          <Modal.Footer>
+            sss
+          </Modal.Footer>
+        </Modal.Card>
+      </Modal>
     </Layout.Admin>
   )
 }

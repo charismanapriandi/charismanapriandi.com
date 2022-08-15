@@ -4,6 +4,11 @@ declare namespace Components {
       isSideBySide?: boolean;
     }
   }
+  declare namespace Modal {
+    export interface Wraper {
+      isOpen: boolean;
+    }
+  }
   declare namespace Layout {
     export interface Admin {
       children: React.ReactNode;

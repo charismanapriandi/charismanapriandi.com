@@ -9,6 +9,7 @@ import Toggle from './Toggle';
 import Field from './Field/index';
 import Form from './Form';
 import GetInTouchForm from "./GetInTouchForm";
+import Modal from './Modal';
 
 import Sidebar from './Sidebar';
 import Divider from "./Divider";
@@ -35,6 +36,7 @@ import CategoryForm from './CategoryForm';
 import Table from './Table';
 
 export {
+  Modal,
   Table,
   CategoryForm,
   List,
