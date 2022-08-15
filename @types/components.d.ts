@@ -9,6 +9,10 @@ declare namespace Components {
       isOpen: boolean;
     }
   }
+  export interface ModalForm {
+    isOpen: boolean;
+    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+  }
   declare namespace Layout {
     export interface Admin {
       children: React.ReactNode;

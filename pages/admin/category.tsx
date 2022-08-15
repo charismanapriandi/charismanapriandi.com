@@ -1,5 +1,6 @@
-import { Button, Icon, Layout, Modal, Row, Table } from "@/components"
+import { Button, CategoryForm, Icon, Layout, Modal, Row, Table } from "@/components"
 import withProtect from "hoc/withProtect"
+import { useState } from "react"
 
 const rows = [
   {
@@ -15,6 +16,10 @@ const rows = [
 ]
 
 const Category = () => {
+  const [isFormOpen, setIsFormOpen] = useState<boolean>(false)
+  
+  const openForm = () => setIsFormOpen(prev => !prev)
+  
   return (
     <Layout.Admin>
       <Button.Primary css={{marginBottom: '30px'}}>Create</Button.Primary>
@@ -34,7 +39,7 @@ const Category = () => {
               <Table.Cell>{item.name}</Table.Cell>
               <Table.Cell>{item.type}</Table.Cell>
               <Table.Cell>
-                <Button.Icon size={30}>
+                <Button.Icon onClick={openForm} size={30}>
                   <Icon.Pencil size={20} />
                 </Button.Icon>
                 <Button.Icon size={30} color='error'>
@@ -45,60 +50,7 @@ const Category = () => {
           ))}
         </Table.Body>
       </Table>
-      <Modal isOpen={true}>
-        <Modal.Card>
-          <Modal.Header>
-            modal
-          </Modal.Header>
-          <Modal.Body>
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-            sss<br />
-          </Modal.Body>
-          <Modal.Footer>
-            sss
-          </Modal.Footer>
-        </Modal.Card>
-      </Modal>
+      <CategoryForm isOpen={isFormOpen} setIsOpen={setIsFormOpen} />
     </Layout.Admin>
   )
 }

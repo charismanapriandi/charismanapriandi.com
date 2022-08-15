@@ -8,4 +8,10 @@ declare namespace FormSchema {
     username: string;
     password: string;
   }
+  declare namespace Category {
+    export interface Create {
+      name: string;
+      type: string;
+    }
+  }
 }
