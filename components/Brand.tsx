@@ -1,13 +1,13 @@
 import Link from "next/link";
-import { memo } from "react"
+import { FC, memo } from "react"
 import { Icon, Text } from "."
 
-const Brand = () => {
+const Brand: FC<Components.Brand> = ({ displayText = false }) => {
   return (
     <Link href='/' passHref>
-      <a css={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px'}}>
+      <a css={{display: 'flex', alignItems: 'center', gap: '20px'}}>
         <Icon.Logo size={34} />
-        <Text color="primary">Charisman Apriandi</Text>
+        {displayText && <Text color="primary">Charisman Apriandi</Text>}
       </a>
     </Link>
   )

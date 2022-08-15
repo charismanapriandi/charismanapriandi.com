@@ -4,6 +4,22 @@ declare namespace Components {
       isSideBySide?: boolean;
     }
   }
+  declare namespace Layout {
+    export interface Admin {
+      children: React.ReactNode;
+    }
+  }
+  declare namespace Navbar {
+    export interface Admin {}
+  }
+  export interface Table {
+    rows: {
+      [head: string]: string;
+    }[]
+  }
+  export interface Brand {
+    displayText?: boolean;
+  }
   export interface Button {
     variant?: 'contained' | 'text';
   }

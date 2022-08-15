@@ -24,7 +24,7 @@ export const AuthContext = createContext<AuthContext>(defaultValue)
 
 const AuthContextProvider: FC<{children:React.ReactNode}> = ({ children }) => {
   const [user, setUser] = useState<User | null>(null)
-  const [isLogined, setIsLogined] = useState<boolean>(false)
+  const [isLogined, setIsLogined] = useState<boolean>(true)
 
   return (
     <AuthContext.Provider value={{ user, setUser, isLogined, setIsLogined }}>

@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { memo } from "react";
 
-const Divider = styled.div<Components.Divider>(({theme, variant, spacing}) => ({
+const Divider = styled.div<Components.Divider>(({theme, variant, spacing = 10}) => ({
   width: variant === 'vertical' ? '1px' : '100%',
   height: variant === 'vertical' ? '100%' : '1px',
   backgroundColor: theme.palette.color.border,

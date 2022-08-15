@@ -22,7 +22,7 @@ const ProjectPaper = styled(Paper)(({theme}) => ({
       color: theme.palette.text.highlight
     }
   },
-  [`${breakpoint('md')}`]: {
+  [`${breakpoint('sm')}`]: {
     padding: '20px',
   }
 }))

@@ -10,8 +10,12 @@ import List from "./List";
 import Logo from "./Logo";
 import Github from "./Github";
 import Download from "./Download";
+import Trash from "./Trash";
+import Pencil from "./Pencil";
 
 export {
+  Pencil,
+  Trash,
   Download,
   Github,
   Logo,

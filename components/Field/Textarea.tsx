@@ -3,8 +3,8 @@ import styled from "@emotion/styled";
 const Textarea = styled.textarea(({theme}) => ({
   padding: '10px 20px',
   borderRadius: theme.borderRadius,
-  backgroundColor: theme.palette.background.primary,
-  border: `1px solid ${theme.palette.color.border}`,
+  backgroundColor: theme.palette.background.secondary,
+  border: 'none',
   fontSize: theme.font.size.medium,
   width: '100%',
   fontFamily: theme.font.family.poppins,

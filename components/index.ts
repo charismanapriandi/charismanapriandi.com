@@ -3,15 +3,16 @@ import * as Layout from "./layout";
 import * as Motion from "./Motion";
 import * as Container from "./Container";
 import * as Button from "./Button";
+import * as Navbar from "./Navbar";
 
 import Toggle from './Toggle';
 import Field from './Field/index';
 import Form from './Form';
 import GetInTouchForm from "./GetInTouchForm";
 
+import Sidebar from './Sidebar';
 import Divider from "./Divider";
 import Grid from "./Grid";
-import Navbar from "./Navbar";
 import Paper from "./Paper";
 import Row from "./Row";
 import Text from "./Text";
@@ -29,8 +30,15 @@ import Loading from "./Loading";
 import Footer from './Footer';
 import LoginForm from './LoginForm';
 import Brand from './Brand';
+import List from './List';
+import CategoryForm from './CategoryForm';
+import Table from './Table';
 
 export {
+  Table,
+  CategoryForm,
+  List,
+  Sidebar,
   Brand,
   LoginForm,
   Footer,

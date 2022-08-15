@@ -1,13 +1,57 @@
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
-import { FC } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useState } from "react";
 import { memo } from "react"
-import { Icon } from ".";
+import { Icon, Text, List, Row } from ".";
 
-const Sidebar: FC<Components.Sidebar> = ({isActive, handleClose}) => {
+const links = [
+  {
+    label: 'Detail',
+    href: '/admin/detail'
+  },
+  {
+    label: 'Project',
+    href: '/admin/project'
+  },
+  {
+    label: 'Technology',
+    href: '/admin/technology'
+  },
+  {
+    label: 'Category',
+    href: '/admin/category'
+  }
+]
+
+const Sidebar = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  const { pathname } = useRouter()
+  
   return (
-    <SidebarStyled isActive={isActive}>
-      {/* <Icon.Times /> */}
-      <span css={{display: 'block', textAlign:'right'}} onClick={handleClose}>Close</span>
+    <SidebarStyled isOpen={isOpen}>
+      <Row justifyContent="center">
+        <Icon.Logo size={60} />
+      </Row>
+      <List css={{marginTop: '30px'}}>
+        {links.map((item, index) => (
+          <List.Item key={index}>
+            <Link href={item.href} passHref>
+              <a>
+                  <Text 
+                    size='small' 
+                    color={
+                      item.href === pathname 
+                        ? 'highlight' 
+                        : 'secondary'}>
+                    {item.label}
+                  </Text>
+              </a>
+            </Link>
+          </List.Item>
+        ))}
+      </List>
     </SidebarStyled>
   )
 }
@@ -15,18 +59,25 @@ const Sidebar: FC<Components.Sidebar> = ({isActive, handleClose}) => {
 export default memo(Sidebar);
 
 interface SidebarStyled {
-  isActive: boolean;
+  isOpen: boolean;
 }
 
-const SidebarStyled = styled.aside<SidebarStyled>(({isActive, theme}) => ({
-  position: 'fixed',
-  padding: '20px',
-  width: '40%',
-  zIndex: 10000,
-  borderLeft: `1px solid ${theme.palette.color.border}`,
-  transition: 'all .3s ease-in-out',
+const SidebarStyled = styled.aside<SidebarStyled>(({isOpen, theme}) => ({
+  backgroundColor: theme.palette.background.secondary,
+  padding: '15px',
   height: '100vh',
-  backgroundColor: theme.palette.background.primary,
-  top: 0,
-  right: isActive ? '0%' : '-40%',
+  width: '200px',
+}))
+
+const CustomListItem = styled((props: any) => <List.Item {...props} />)(() => ({
+  display: 'flex',
+  alignItems: 'center',
+  '.label': {
+    display: 'none'
+  },
+  ':hover': {
+    '.label': {
+      display: 'block',
+    }
+  }
 }))

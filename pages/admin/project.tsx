@@ -3,9 +3,9 @@ import withProtect from "hoc/withProtect"
 
 const Admin = () => {
   return (
-    <Layout.Primary>
-      admin page
-    </Layout.Primary>
+    <Layout.Admin>
+      Project
+    </Layout.Admin>
   )
 }
 
