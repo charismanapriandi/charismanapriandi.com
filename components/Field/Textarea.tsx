@@ -11,6 +11,7 @@ const Textarea = styled.textarea(({theme}) => ({
   fontWeight: 300,
   color: theme.palette.text.secondary,
   transition: 'all .3s ease-in-out',
+  resize: 'none',
   "::placeholder, :-moz-placeholder, ::-webkit-input-placeholder, ::-ms-input-placeholder": {
     color: theme.palette.text.secondary,
     textTransform: 'capitalize',
@@ -25,6 +26,10 @@ const Textarea = styled.textarea(({theme}) => ({
   }
 }))
 
-Textarea.displayName = 'Field Textarea'
+Textarea.defaultProps = {
+  rows: 5
+}
+
+Textarea.displayName = 'FieldTextarea'
 
 export default Object.assign(Textarea, {})

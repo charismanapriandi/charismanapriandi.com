@@ -22,7 +22,7 @@ const Category = () => {
   
   return (
     <Layout.Admin>
-      <Button.Primary css={{marginBottom: '30px'}}>Create</Button.Primary>
+      <Button.Primary onClick={openForm} css={{marginBottom: '30px'}}>Create</Button.Primary>
       <Table>
         <Table.Head>
           <Table.Row>
@@ -38,13 +38,15 @@ const Category = () => {
               <Table.Cell>{item.id}</Table.Cell>
               <Table.Cell>{item.name}</Table.Cell>
               <Table.Cell>{item.type}</Table.Cell>
-              <Table.Cell>
-                <Button.Icon onClick={openForm} size={30}>
-                  <Icon.Pencil size={20} />
-                </Button.Icon>
-                <Button.Icon size={30} color='error'>
-                  <Icon.Trash size={20} />
-                </Button.Icon>
+              <Table.Cell fit>
+                <div css={{display: 'flex', gap: '10px', width: 'fit-content'}}>
+                  <Button.Icon onClick={openForm} size={30}>
+                    <Icon.Pencil size={20} />
+                  </Button.Icon>
+                  <Button.Icon size={30} color='error'>
+                    <Icon.Trash size={20} />
+                  </Button.Icon>
+                </div>
               </Table.Cell>
             </Table.Row>
           ))}

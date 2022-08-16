@@ -11,6 +11,7 @@ import Form from './Form';
 import GetInTouchForm from "./GetInTouchForm";
 import Modal from './Modal';
 
+import TechnologyForm from './TechnologyForm';
 import Sidebar from './Sidebar';
 import Divider from "./Divider";
 import Grid from "./Grid";
@@ -34,8 +35,11 @@ import Brand from './Brand';
 import List from './List';
 import CategoryForm from './CategoryForm';
 import Table from './Table';
+import ProjectForm from './ProjectForm';
 
 export {
+  ProjectForm,
+  TechnologyForm,
   Modal,
   Table,
   CategoryForm,

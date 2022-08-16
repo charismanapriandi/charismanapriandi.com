@@ -5,7 +5,7 @@ export const theme: Theme = {
     color: {
       primary: '#3481EF',
       secondary: '#FB4E00',
-      border: '#A0A0A0',
+      border: '#CDCDCD',
       error: '#FB4E00',
       success: '#17D386'
     },

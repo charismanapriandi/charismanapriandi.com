@@ -27,16 +27,18 @@ const CategoryForm: FC<Components.ModalForm> = ({isOpen, setIsOpen}) => {
         </Modal.Header>
         <Modal.Body>
           <Form.Item>
-            <Field.Input onChange={formik.handleChange} name='name' placeholder='name' />
+            <Field.Label>Name</Field.Label>
+            <Field.Input onChange={formik.handleChange} name='name' />
             {!!formik.errors.name && <Field.Message type='error'>{formik.errors.name}</Field.Message>}
           </Form.Item>
           <Form.Item>
-            <Field.Input onChange={formik.handleChange} name='type' placeholder='type' />
+            <Field.Label>Type</Field.Label>
+            <Field.Input onChange={formik.handleChange} name='type' />
             {!!formik.errors.type && <Field.Message type='error'>{formik.errors.type}</Field.Message>}
           </Form.Item>
         </Modal.Body>
         <Modal.Footer>
-          <Button.Primary>
+          <Button.Primary type='submit'>
             Submit
           </Button.Primary>
         </Modal.Footer>

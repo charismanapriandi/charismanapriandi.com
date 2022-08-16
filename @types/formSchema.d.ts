@@ -14,4 +14,22 @@ declare namespace FormSchema {
       type: string;
     }
   }
+  declare namespace Technology {
+    export interface Create {
+      name: string;
+      type: string;
+      url: string;
+      logo: string;
+    }
+  }
+  declare namespace Project {
+    export interface Create {
+      name: string;
+      type: string;
+      url: string;
+      description: string;
+      logo: string;
+      technologies: string[];
+    }
+  }
 }

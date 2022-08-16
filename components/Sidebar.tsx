@@ -1,4 +1,3 @@
-import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -7,10 +6,6 @@ import { memo } from "react"
 import { Icon, Text, List, Row } from ".";
 
 const links = [
-  {
-    label: 'Detail',
-    href: '/admin/detail'
-  },
   {
     label: 'Project',
     href: '/admin/project'
@@ -32,7 +27,9 @@ const Sidebar = () => {
   return (
     <SidebarStyled isOpen={isOpen}>
       <Row justifyContent="center">
-        <Icon.Logo size={60} />
+        <Link href='/' passHref>
+          <Icon.Logo size={60} />
+        </Link>
       </Row>
       <List css={{marginTop: '30px'}}>
         {links.map((item, index) => (
@@ -67,17 +64,4 @@ const SidebarStyled = styled.aside<SidebarStyled>(({isOpen, theme}) => ({
   padding: '15px',
   height: '100vh',
   width: '200px',
-}))
-
-const CustomListItem = styled((props: any) => <List.Item {...props} />)(() => ({
-  display: 'flex',
-  alignItems: 'center',
-  '.label': {
-    display: 'none'
-  },
-  ':hover': {
-    '.label': {
-      display: 'block',
-    }
-  }
 }))
