@@ -31,7 +31,7 @@ const ThemeSwitcher = () => {
 }
 
 const CustomSwitch = styled(Toggle)(({theme, isOn}) => ({
-  backgroundColor: theme.palette.color.primary
+  backgroundColor: isOn ? theme.palette.color.primary : theme.palette.color.border
 }))
 
 const MotionHandle = Toggle.Handle.withComponent(motion.div)

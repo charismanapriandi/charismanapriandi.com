@@ -18,7 +18,7 @@ const Home: NextPage = () => {
         <Text css={{maxWidth: '800px', marginTop: '30px', wordSpacing: '3px'}}>
           {text.description}
         </Text>
-        <Button.Primary css={{marginTop: '20px'}}>
+        <Button.Primary css={{marginTop: '50px'}}>
           <Icon.Download css={{marginRight: '20px', color: '#FFFFFF'}} size={24} /> Curriculum Vitae
         </Button.Primary>
       </div>
