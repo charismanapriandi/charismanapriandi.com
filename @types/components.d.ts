@@ -4,14 +4,20 @@ declare namespace Components {
       isSideBySide?: boolean;
     }
   }
+  export interface Anchor extends React.HTMLProps<HTMLAnchorElement> {
+    children: React.ReactNode;
+  }
   declare namespace Modal {
     export interface Wraper {
       isOpen: boolean;
     }
+    export interface Card extends emotionAsProps {}
   }
-  export interface ModalForm {
+  export interface ModalForm<E = any> {
     isOpen: boolean;
-    setIsOpen: React.Dispatch<React.SetStateAction<boolean>>
+    close: () => void;
+    payload?: E;
+    callback?: () => void;
   }
   declare namespace Layout {
     export interface Admin {
@@ -31,6 +37,7 @@ declare namespace Components {
   }
   export interface Button {
     variant?: 'contained' | 'text';
+    color?: 'primary' | 'secondary' | 'error' | 'success'
   }
   export interface Container {
     children: ReactNode;
@@ -74,19 +81,31 @@ declare namespace Components {
     color?: 'primary' | 'secondary' | 'highlight';
     weight?: 500 | 300;
   }
-  export interface Icon extends React.HTMLProps<HTMLSpanElement> {
-    size?: number;
+  export type Icon = {
+    color?: Common.TextColor;
   }
   export interface IconSvg extends React.SVGProps<SVGSVGElement> {
     variant?: 'solid' | 'outline',
     size?: number;
   }
   declare namespace Field {
-    export interface Input extends React.HTMLProps<HTMLInputElement> {}
+    export interface Input extends React.HTMLProps<HTMLInputElement> {
+      label?: string;
+      error?: string;
+      name: string;
+    }
+    export interface UploadFile extends Omit<Input, 'type'> {
+      preview?: string;
+    }
+    export interface SelectC extends Input {
+      options: Common.OptionValues[];
+      setValue: (field: string, value: any, shouldValidate?: boolean | undefined) => Promise<void> | Promise<FormikErrors<any>>
+    };
     export interface Textarea extends React.HTMLProps<HTMLTextAreaElement> {}
   }
   declare namespace Card {
     export interface Project {
+      technologies: Data.Technology[];
       name: string;
       description: string;
     }

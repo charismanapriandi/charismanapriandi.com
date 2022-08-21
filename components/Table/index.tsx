@@ -3,7 +3,7 @@ import { memo } from "react";
 import Head from "./Head";
 import Body from "./Body";
 import Row from "./Row";
-import Th from "./Th";
+import HeadCell from "./HeadCell";
 import Cell from "./Cell";
 
 const Table = styled.table(() => ({
@@ -15,6 +15,6 @@ export default Object.assign(memo(Table), {
   Body,
   Head,
   Row,
-  Th,
+  HeadCell,
   Cell
 })

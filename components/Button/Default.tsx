@@ -3,7 +3,7 @@ import { memo } from "react";
 
 const Default = styled.button<Components.Button>(({theme, variant}) => ({
   padding: '10px 20px',
-  borderRadius: '15px',
+  borderRadius: theme.borderRadius,
   width: 'fit-content',
   border: 'none',
   fontSize: '16px',

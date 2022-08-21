@@ -1,4 +1,5 @@
 import '@emotion/react'
+import '@emotion-icons/emotion-icon'
 
 declare module '@emotion/react' {
   export interface Theme {
@@ -33,6 +34,11 @@ declare module '@emotion/react' {
         large: string;
       }
     },
+    padding: string;
     borderRadius: string;
   }
+}
+
+interface emotionAsProps {
+  as?: React.ElementType | keyof JSX.IntrinsicElements
 }

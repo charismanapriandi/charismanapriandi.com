@@ -7,8 +7,7 @@ const Admin: FC<Components.Layout.Admin> = ({children}) => {
     <Layout>
       <Sidebar />
       <div css={{flex: 1}}>
-        <Navbar.Admin />
-        <div css={{padding: '100px 20px 0 20px'}}>
+        <div css={{padding: '20px'}}>
           {children}
         </div>
       </div>

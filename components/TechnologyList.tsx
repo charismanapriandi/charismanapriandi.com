@@ -2,44 +2,13 @@ import { useFormik } from "formik"
 import { memo, useEffect, useState } from "react"
 import { Row, Field, TechnologyCardMotion, Grid } from "."
 import { AnimatePresence } from 'framer-motion';
-import useUniqueValue from "hook/useUniqueValue";
 import Form from "./Form";
-
-const data = [
-  {
-    name: 'Javascript',
-    color: '#F7DF21',
-    image: '/javascript.png',
-    type: 'Programming Language',
-    url: '#'
-  },
-  {
-    name: 'React Js',
-    color: '#020B1C',
-    image: '/react.png',
-    type: 'Library',
-    url: '#'
-  },
-  {
-    name: 'Node Js',
-    color: '#F0F0F0',
-    image: '/nodejs.png',
-    type: 'Javascript Runtime',
-    url: '#'
-  },
-  {
-    name: 'Python',
-    color: '#020B1C',
-    image: '/python.png',
-    type: 'Programming Language',
-    url: '#'
-  }
-]
+import { useTechnologyService } from "service/TechnologyService";
+import uniqueString from "utils/uniqueString";
 
 const TechnologyList = () => {
-  const [listOfType, setListOfType] = useState<string[]>([])
-
-  const filter = useUniqueValue(listOfType)
+  const [ filter, setFilter ] = useState<string[]>([])
+  const { technologies } = useTechnologyService({shouldGetData: true})
 
   const formik = useFormik({
     initialValues: {
@@ -49,8 +18,12 @@ const TechnologyList = () => {
   })
 
   useEffect(() => {
-    setListOfType(data.map(item => item.type))
-  }, [])
+    const tags = technologies.map(technology => technology.tag)
+    const unique = uniqueString(tags)
+    setFilter(unique)
+
+    return () => setFilter([])
+  }, [technologies])
   
   return (
     <>
@@ -84,17 +57,17 @@ const TechnologyList = () => {
         css={{marginTop: '20px'}} 
         gap={10}>
         <AnimatePresence>
-          {data
+          {technologies
             .filter(
               i => formik.values.type === 'All' 
                 ? i 
-                : i.type === formik.values.type)
+                : i.tag === formik.values.type)
             .map((item, index) =>
               <TechnologyCardMotion 
                 key={index} 
-                color={item.color} 
-                type={item.type} 
-                image={item.image} 
+                color='transparent' 
+                type={item.tag} 
+                image={item.logo} 
                 name={item.name} 
                 url={item.url} />
             )

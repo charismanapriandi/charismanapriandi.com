@@ -22,9 +22,6 @@ const Nav = styled.nav(({theme}) => ({
 }))
 
 const containerCss = css({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'flex-end',
 })
 
 Admin.displayName = 'NavbarAdmin'

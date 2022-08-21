@@ -1,28 +1,32 @@
 import { useFormik } from "formik"
 import { memo, useState } from "react"
-import LoginSchema from "schema/login"
+import LoginSchema, { LoginValues } from "schema/login"
 import { Loading, Button, Field, Form } from "@/components"
+import useAuthService from "service/AuthService"
 
-const initialValues: FormSchema.Login = {
+const initialValues: LoginValues = {
   username: '',
   password: '',
 }
 
-const LoginForm = () => {
-  const [isSubmitted, setIsSubmitted] = useState<boolean>(false)
-
-  const submitForm = () => {
-    setIsSubmitted(true)
-    setTimeout(() => setIsSubmitted(false), 3000)
-  }
+const Login = () => {
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false)
+  const {login} = useAuthService()
   
-  const formik = useFormik<FormSchema.Login>({
+  const submitForm = async (values: LoginValues) => {
+    setIsSubmitting(true)
+    login(values)
+    setIsSubmitting(false)
+  }
+
+  
+  const formik = useFormik<LoginValues>({
     initialValues: initialValues,
     validateOnChange: false,
     onSubmit: submitForm,
     validationSchema: LoginSchema
   })
-  
+
   return (
     <Form onSubmit={formik.handleSubmit} css={{maxWidth: '400px', width: '100%'}}>
       <Form.Item>
@@ -30,16 +34,21 @@ const LoginForm = () => {
         {!!formik.errors.username && <Field.Message type='error'>{formik.errors.username}</Field.Message>}
       </Form.Item>
       <Form.Item>
-        <Field.Input onChange={formik.handleChange} placeholder='Password' name='password' />
+        <Field.Input onChange={formik.handleChange} placeholder='Password' name='password' type='password' />
         {!!formik.errors.password && <Field.Message type='error'>{formik.errors.password}</Field.Message>}
       </Form.Item>
-      <Button.Primary 
-        disabled={isSubmitted} 
+      {/* {!!error && (
+        <Form.Item>
+          <Alert type='error'>{error.message}</Alert>
+        </Form.Item>
+      )} */}
+      <Button 
+        disabled={isSubmitting} 
         type='submit'>
-        {isSubmitted ? <Loading /> : 'Submit'}
-      </Button.Primary>
+        {isSubmitting ? <Loading /> : 'Submit'}
+      </Button>
     </Form>
   )
 }
 
-export default memo(LoginForm)
+export default memo(Login)

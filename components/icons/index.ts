@@ -12,8 +12,13 @@ import Github from "./Github";
 import Download from "./Download";
 import Trash from "./Trash";
 import Pencil from "./Pencil";
+import ChevronDown from "./ChevronDown";
+import Upload from "./Upload";
+import ExternalLink from "./ExternalLink";
 
 export {
+  Upload,
+  ChevronDown,
   Pencil,
   Trash,
   Download,
@@ -28,4 +33,5 @@ export {
   Moon,
   Linkedin,
   Grid,
+  ExternalLink,
 };

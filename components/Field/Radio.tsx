@@ -6,7 +6,6 @@ const Radio: FC<Props> = ({label, isSelected, ...props}) => {
   return (
     <>
       <Label 
-        layout
         whileTap={{scale: 0.9}} 
         isSelected={isSelected} 
         transition={{type: 'spring', stiffness: 200}} 
@@ -22,7 +21,7 @@ interface Props extends Components.Field.Input {
   isSelected: boolean;
 }
 
-const Label = styled(motion.label)<Props>(({isSelected, theme}) => ({
+const Label = styled(motion.label)<Omit<Props, 'name'>>(({isSelected, theme}) => ({
   display: 'block',
   cursor: 'pointer',
   border: `1px solid ${isSelected ? theme.palette.color.primary+'7F' : theme.palette.color.border}`,

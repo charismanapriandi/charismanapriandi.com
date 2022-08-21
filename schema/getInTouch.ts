@@ -1,9 +1,14 @@
-import * as yup from 'yup';
+import { string, object, InferType, TypeOf } from 'yup';
 
-const getInTouch = yup.object().shape({
-  name: yup.string().required(),
-  email: yup.string().email().required(),
-  message: yup.string().required()
+const getInTouch = object({
+  name: string().required(),
+  email: string().email().required(),
+  message: string().required()
 })
 
+interface GetInTouchValues extends InferType<typeof getInTouch> {}
+
 export default getInTouch;
+export type {
+  GetInTouchValues
+}

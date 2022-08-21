@@ -8,7 +8,9 @@ const text = {
   description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt tempor congue. Praesent velit nibh, rhoncus eget ante sit amet, tempor luctus diam. Quisque porta tempus arcu non porta.'
 }
 
+
 const Home: NextPage = () => {
+  
   return (
     <Layout.Primary isPaddingTop={false}>
       <div css={heroCss}>
@@ -18,9 +20,9 @@ const Home: NextPage = () => {
         <Text css={{maxWidth: '800px', marginTop: '30px', wordSpacing: '3px'}}>
           {text.description}
         </Text>
-        <Button.Primary css={{marginTop: '50px'}}>
+        <Button css={{marginTop: '50px'}}>
           <Icon.Download css={{marginRight: '20px', color: '#FFFFFF'}} size={24} /> Curriculum Vitae
-        </Button.Primary>
+        </Button>
       </div>
       <div css={sectionCss}>
         <RecordCard experienceCount={10} projectCount={100} />
@@ -33,10 +35,10 @@ const Home: NextPage = () => {
         <Text css={{marginBottom: '20px'}} as='h2'>Technology that i use</Text>
         <TechnologyList />
       </div>
-      <div css={sectionCss}>
+      {/* <div css={sectionCss}>
         <Text css={{marginBottom: '20px'}} as='h2'>Get in touch</Text>
         <GetInTouchForm />
-      </div>
+      </div> */}
     </Layout.Primary>
   )
 }

@@ -1,10 +1,12 @@
+import 'react-toastify/dist/ReactToastify.css';
 import type { AppProps } from 'next/app'
-import { Global, ThemeProvider, useTheme } from '@emotion/react'
+import { Global, ThemeProvider } from '@emotion/react'
 import { darkTheme, theme } from 'config/theme'
 import ColorSchemeProvider, { ColorSchemeContext } from 'context/ColorScheme'
 import { FC, useContext } from 'react'
 import globalStyles from 'styles/global'
 import AuthContextProvider from 'context/AuthContext'
+import Toaster from 'components/Toaster'
 
 function App(props: AppProps) {
   return (
@@ -21,6 +23,7 @@ const ThemeController: FC<AppProps> = ({Component, pageProps}) => {
   
   return (
     <ThemeProvider theme={colorScheme === 'dark' ? darkTheme : theme}>
+      <Toaster />
       <Global styles={globalStyles} />
       <Component {...pageProps} />
     </ThemeProvider>

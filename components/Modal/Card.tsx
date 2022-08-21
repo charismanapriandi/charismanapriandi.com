@@ -1,7 +1,11 @@
 import styled from "@emotion/styled";
 import { memo } from "react";
 
-const Card = styled.div(({theme}) => ({
+interface EmotionAsProps {
+  as?: React.ElementType | keyof JSX.IntrinsicElements
+}
+
+const Card = styled.div<EmotionAsProps>(({theme}) => ({
   backgroundColor: theme.palette.background.primary,
   display: 'flex',
   flexDirection: 'column',

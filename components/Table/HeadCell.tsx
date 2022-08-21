@@ -1,7 +1,7 @@
 import styled from "@emotion/styled";
 import { memo } from "react";
 
-const Th = styled.th(({theme}) => ({
+const HeadCell = styled.th(({theme}) => ({
   color: theme.palette.text.primary,
   fontSize: theme.font.size.medium,
   fontFamily: theme.font.family.poppins,
@@ -12,4 +12,4 @@ const Th = styled.th(({theme}) => ({
   textAlign: 'left'
 }))
 
-export default memo(Th);
+export default memo(HeadCell);

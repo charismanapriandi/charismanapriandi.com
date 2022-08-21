@@ -1,9 +1,8 @@
 /** @jsxImportSource @emotion/react */
 import { motion } from 'framer-motion';
-import Image from 'next/image';
 import { memo } from 'react';
 import { FC } from 'react';
-import { Paper as BasePaper, Text } from '@/components';
+import { Paper as BasePaper, Text, Image } from '@/components';
 import styled from '@emotion/styled';
 
 const TechnologyCardMotion: FC<Components.Card.Technology> = ({image, name, url, color}) => (
@@ -15,7 +14,13 @@ const TechnologyCardMotion: FC<Components.Card.Technology> = ({image, name, url,
     exit={cardMotion.inactive}
     >
     <Paper color={color}>
-      <Image css={{flexShrink: 0}} src={image} alt={name} width={40} height={40}/>
+      <Image 
+        isExternalResource
+        css={{flexShrink: 0}} 
+        src={image} 
+        alt={name} 
+        width={40} 
+        height={40}/>
       <Text color='primary'>{name}</Text>
     </Paper>
   </motion.a>

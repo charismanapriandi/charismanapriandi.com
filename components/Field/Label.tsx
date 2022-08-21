@@ -8,6 +8,7 @@ const Label = styled.label(({theme}) => ({
   fontSize: theme.font.size.medium,
   marginBottom: '10px',
   display: 'block',
+  textTransform: 'capitalize',
 }))
 
 export default memo(Label);

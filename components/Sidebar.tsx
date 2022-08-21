@@ -3,7 +3,8 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { memo } from "react"
-import { Icon, Text, List, Row } from ".";
+import useAuthService from "service/AuthService";
+import { Icon, Text, List, Row, ThemeSwitcher, Divider } from ".";
 
 const links = [
   {
@@ -15,14 +16,15 @@ const links = [
     href: '/admin/technology'
   },
   {
-    label: 'Category',
-    href: '/admin/category'
+    label: 'Tag',
+    href: '/admin/tags'
   }
 ]
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { pathname } = useRouter()
+  const { logout } = useAuthService()
   
   return (
     <SidebarStyled isOpen={isOpen}>
@@ -49,6 +51,17 @@ const Sidebar = () => {
           </List.Item>
         ))}
       </List>
+      <Divider spacing={20} />
+      <List>
+        <List.Item css={{cursor: 'pointer'}} onClick={logout}>
+          <Text 
+            size='small' 
+            color={'secondary'}>
+            Logout
+          </Text>
+        </List.Item>
+      </List>
+      <ThemeSwitcher />
     </SidebarStyled>
   )
 }

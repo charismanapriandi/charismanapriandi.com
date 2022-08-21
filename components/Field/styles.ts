@@ -1,6 +1,6 @@
-import styled from "@emotion/styled";
+import { css, Theme } from "@emotion/react";
 
-const Input = styled.input(({theme}) => ({
+export const fieldCss = (theme: Theme) => css({
   padding: '10px 20px',
   borderRadius: theme.borderRadius,
   backgroundColor: theme.palette.background.secondary,
@@ -23,8 +23,4 @@ const Input = styled.input(({theme}) => ({
       color: theme.palette.text.highlight,
     }
   }
-}))
-
-Input.displayName = 'Field Input'
-
-export default Object.assign(Input, {})
+})

@@ -2,16 +2,17 @@ import * as Icon from './icons'
 import * as Layout from "./layout";
 import * as Motion from "./Motion";
 import * as Container from "./Container";
-import * as Button from "./Button";
 import * as Navbar from "./Navbar";
+import * as FormCollection from './FormCollection';
+import * as TableCollection from './TableCollection'
 
+import Button from "./Button";
 import Toggle from './Toggle';
 import Field from './Field/index';
 import Form from './Form';
-import GetInTouchForm from "./GetInTouchForm";
+import GetInTouchForm from "./FormCollection/GetInTouch";
 import Modal from './Modal';
 
-import TechnologyForm from './TechnologyForm';
 import Sidebar from './Sidebar';
 import Divider from "./Divider";
 import Grid from "./Grid";
@@ -30,23 +31,26 @@ import TechnologyCard from "./TechnologyCard";
 import Tag from "./Tag";
 import Loading from "./Loading";
 import Footer from './Footer';
-import LoginForm from './LoginForm';
 import Brand from './Brand';
 import List from './List';
-import CategoryForm from './CategoryForm';
 import Table from './Table';
-import ProjectForm from './ProjectForm';
+import Toaster from './Toaster';
+import Alert from './Alert';
+import Anchor from './Anchor';
+import Image from './Image';
 
 export {
-  ProjectForm,
-  TechnologyForm,
+  Image,
+  Anchor,
+  TableCollection,
+  Alert,
+  Toaster,
   Modal,
   Table,
-  CategoryForm,
+  FormCollection,
   List,
   Sidebar,
   Brand,
-  LoginForm,
   Footer,
   Motion,
   Loading,

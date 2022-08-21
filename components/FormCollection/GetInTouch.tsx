@@ -1,17 +1,17 @@
 import { useFormik } from "formik";
 import { memo } from "react";
-import getInTouch from "schema/getInTouch";
+import getInTouch, { GetInTouchValues } from "schema/getInTouch";
 import { Field, Button } from '@/components'
 import Form from "components/Form";
 
-const initialValues: FormSchema.GetInTouch = {
+const initialValues: GetInTouchValues = {
   name: '',
   email: '',
   message: '',
 }
 
 const GetInTouch = () => {
-  const formik = useFormik<FormSchema.GetInTouch>({
+  const formik = useFormik<GetInTouchValues>({
     initialValues: initialValues,
     onSubmit: () => {},
     validationSchema: getInTouch, 
@@ -35,7 +35,7 @@ const GetInTouch = () => {
         <Field.Textarea name="message" onChange={formik.handleChange} placeholder="Message" />
         {!!formik.errors.message && <Field.Message type='error'>{formik.errors.message}</Field.Message>}
       </Form.Item>
-      <Button.Primary type='submit'>Send</Button.Primary>
+      <Button type='submit'>Send</Button>
     </Form>
   )
 }

@@ -1,5 +1,23 @@
 import { Theme } from "@emotion/react";
 
+const layout = {
+  boxShadow: {
+    sm: 'rgba(0, 0, 0, 0.04) 0px 3px 5px'
+  },
+  font: {
+    family: {
+      poppins: `'Poppins', sans-serif`,
+    },
+    size: {
+      small: '16px',
+      medium: '18px',
+      large: '20px',
+    }
+  },
+  padding: '10px 20px',
+  borderRadius: '5px'
+}
+
 export const theme: Theme = {
   palette: {
     color: {
@@ -19,20 +37,7 @@ export const theme: Theme = {
       highlight: '#3481EF'
     }
   },
-  boxShadow: {
-    sm: 'rgba(0, 0, 0, 0.04) 0px 3px 5px'
-  },
-  font: {
-    family: {
-      poppins: `'Poppins', sans-serif`,
-    },
-    size: {
-      small: '16px',
-      medium: '18px',
-      large: '20px',
-    }
-  },
-  borderRadius: '15px'
+  ...layout
 }
 
 export const darkTheme: Theme = {
@@ -54,18 +59,5 @@ export const darkTheme: Theme = {
       highlight: '#3F8AF9',
     }
   },
-  boxShadow: {
-    sm: 'rgba(0, 0, 0, 0.04) 0px 3px 5px'
-  },
-  font: {
-    family: {
-      poppins: `'Poppins', sans-serif`,
-    },
-    size: {
-      small: '16px',
-      medium: '18px',
-      large: '20px',
-    },
-  },
-  borderRadius: '15px',
+  ...layout
 }
