@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 import type { NextPage } from 'next'
-import { Button, GetInTouchForm, Icon, Layout, ProjectList, RecordCard, TechnologyList, Text } from '@/components'
+import { Button, Icon, Layout, ProjectList, RecordCard, TechnologyList, Text } from '@/components'
 import { css } from '@emotion/react'
 
 const text = {
@@ -35,10 +35,6 @@ const Home: NextPage = () => {
         <Text css={{marginBottom: '20px'}} as='h2'>Technology that i use</Text>
         <TechnologyList />
       </div>
-      {/* <div css={sectionCss}>
-        <Text css={{marginBottom: '20px'}} as='h2'>Get in touch</Text>
-        <GetInTouchForm />
-      </div> */}
     </Layout.Primary>
   )
 }

@@ -3,12 +3,11 @@ import { memo, useEffect, useState } from "react"
 import { Row, Field, TechnologyCardMotion, Grid } from "."
 import { AnimatePresence } from 'framer-motion';
 import Form from "./Form";
-import { useTechnologyService } from "service/TechnologyService";
 import uniqueString from "utils/uniqueString";
+import technologies from '../public/json/technologies.json'
 
 const TechnologyList = () => {
   const [ filter, setFilter ] = useState<string[]>([])
-  const { technologies } = useTechnologyService({shouldGetData: true})
 
   const formik = useFormik({
     initialValues: {
@@ -23,7 +22,7 @@ const TechnologyList = () => {
     setFilter(unique)
 
     return () => setFilter([])
-  }, [technologies])
+  }, [])
   
   return (
     <>

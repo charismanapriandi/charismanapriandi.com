@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Javascript",
+    "logo": "/javascript.png",
+    "tag": "Programming Language",
+    "url": "https://javascript.com"
+  },
+  {
+    "name": "React Js",
+    "logo": "/react.png",
+    "tag": "Library",
+    "url": "https://reactjs.org"
+  },
+  {
+    "name": "Next Js",
+    "logo": "/nextjs.png",
+    "tag": "Framework",
+    "url": "https://nextjs.org"
+  },
+  {
+    "name": "Python",
+    "logo": "/python.png",
+    "tag": "Programming Language",
+    "url": "https://python.org"
+  }
+]

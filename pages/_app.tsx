@@ -5,15 +5,12 @@ import { darkTheme, theme } from 'config/theme'
 import ColorSchemeProvider, { ColorSchemeContext } from 'context/ColorScheme'
 import { FC, useContext } from 'react'
 import globalStyles from 'styles/global'
-import AuthContextProvider from 'context/AuthContext'
 import Toaster from 'components/Toaster'
 
 function App(props: AppProps) {
   return (
     <ColorSchemeProvider>
-      <AuthContextProvider>
-        <ThemeController {...props}/>
-      </AuthContextProvider>
+      <ThemeController {...props}/>
     </ColorSchemeProvider>
   )
 }

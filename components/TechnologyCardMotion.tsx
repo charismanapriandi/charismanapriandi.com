@@ -15,7 +15,6 @@ const TechnologyCardMotion: FC<Components.Card.Technology> = ({image, name, url,
     >
     <Paper color={color}>
       <Image 
-        isExternalResource
         css={{flexShrink: 0}} 
         src={image} 
         alt={name} 
