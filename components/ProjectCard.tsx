@@ -1,7 +1,8 @@
 import { FC, memo } from "react";
-import { Text, Paper, Row, Image } from '@/components';
+import { Text, Paper, Row } from '@/components';
 import styled from "@emotion/styled";
 import breakpoint from "styles/breakpoint";
+import Image from 'next/image';
 
 const ProjectCard: FC<Components.Card.Project> = ({name, description, technologies }) => {
   return (
@@ -15,7 +16,6 @@ const ProjectCard: FC<Components.Card.Project> = ({name, description, technologi
           && technologies.map((item, index) => (
             <Image 
               src={item.logo} 
-              isExternalResource
               key={index} 
               width={25} 
               height={25} 

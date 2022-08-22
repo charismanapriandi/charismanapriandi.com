@@ -1,8 +1,7 @@
 import { useFormik } from "formik"
 import { memo, useEffect, useState } from "react"
-import { Row, Field, TechnologyCardMotion, Grid } from "."
+import { Row, TechnologyCardMotion, Grid, Radio } from "."
 import { AnimatePresence } from 'framer-motion';
-import Form from "./Form";
 import uniqueString from "utils/uniqueString";
 import technologies from '../public/json/technologies.json'
 
@@ -26,25 +25,23 @@ const TechnologyList = () => {
   
   return (
     <>
-      <Form>
-        <Row flexWrap="wrap" alignItems="center" gap={20}>
-          <Field.Radio
+      <Row flexWrap="wrap" alignItems="center" gap={20}>
+        <Radio
+          onChange={formik.handleChange}
+          isSelected={formik.values.type === 'All'}
+          name="type" 
+          value='All'
+          label='All' />
+        {filter.map((item, index) => (
+          <Radio
+            key={index}
             onChange={formik.handleChange}
-            isSelected={formik.values.type === 'All'}
+            isSelected={formik.values.type === item}
             name="type" 
-            value='All'
-            label='All' />
-          {filter.map((item, index) => (
-            <Field.Radio
-              key={index}
-              onChange={formik.handleChange}
-              isSelected={formik.values.type === item}
-              name="type" 
-              value={item} 
-              label={item} />
-          ))}
-        </Row>
-      </Form>
+            value={item} 
+            label={item} />
+        ))}
+      </Row>
       <Grid 
         isAutoFit={false} 
         column={{

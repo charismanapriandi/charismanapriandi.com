@@ -2,7 +2,8 @@
 import { motion } from 'framer-motion';
 import { memo } from 'react';
 import { FC } from 'react';
-import { Paper as BasePaper, Text, Image } from '@/components';
+import { Paper as BasePaper, Text } from '@/components';
+import Image from 'next/image';
 import styled from '@emotion/styled';
 
 const TechnologyCardMotion: FC<Components.Card.Technology> = ({image, name, url, color}) => (
