@@ -9,27 +9,22 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v3
-      - name: Install Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: '16.13.2'
-      - name: Install yarn
-        run: npm install -g yarn
-      - name: Install dependencies
-        run: yarn install
-      - name: Build
-        run: yarn build
+      # - name: Install Node.js
+      #   uses: actions/setup-node@v1
+      #   with:
+      #     node-version: '16.13.2'
+      # - name: Install yarn
+      #   run: npm install -g yarn
+      # - name: Install dependencies
+      #   run: yarn install
+      # - name: Build
+      #   run: yarn build
       - name: Executing remote ssh
         uses: appleboy/ssh-action@master
         with:
           host: ${{ secrets.SSH_HOST }}
           key: ${{ secrets.SSH_KEY }}
           username: ${{ secrets.SSH_USERNAME }}
-          script: whoami
-
-
-
-
-      # - 
-      # - run: yarn install --frozen-lockfile
-      # - run: yarn build
+          script: |
+            whoami
+            echo "$HOST"
