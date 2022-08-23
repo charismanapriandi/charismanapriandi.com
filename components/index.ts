@@ -2,7 +2,7 @@ import * as Icon from './icons'
 import * as Layout from "./layout";
 import * as Motion from "./Motion";
 import * as Container from "./Container";
-import * as Navbar from "./Navbar";
+import Navbar from "./Navbar";
 
 import Button from "./Button";
 import Toggle from './Toggle';
@@ -27,8 +27,10 @@ import Footer from './Footer';
 import Brand from './Brand';
 import List from './List';
 import Alert from './Alert';
+import ThemeSwitcher2 from './ThemeSwithcer2';
 
 export {
+  ThemeSwitcher2,
   Radio,
   Alert,
   List,

@@ -6,14 +6,20 @@
     "url": "https://javascript.com"
   },
   {
+    "name": "Typescript",
+    "logo": "/typescript.png",
+    "tag": "Tools",
+    "url": "https://www.typescriptlang.org/"
+  },
+  {
     "name": "React Js",
-    "logo": "/react.png",
+    "logo": "/react-js.svg",
     "tag": "Library",
     "url": "https://reactjs.org"
   },
   {
     "name": "Next Js",
-    "logo": "/nextjs.png",
+    "logo": "/next-js.svg",
     "tag": "Framework",
     "url": "https://nextjs.org"
   },
@@ -22,5 +28,35 @@
     "logo": "/python.png",
     "tag": "Programming Language",
     "url": "https://python.org"
+  },
+  {
+    "name": "Git",
+    "logo": "/git.png",
+    "tag": "Tools",
+    "url": "https://git-scm.com/"
+  },
+  {
+    "name": "Nest Js",
+    "logo": "/nest-js.png",
+    "tag": "Framework",
+    "url": "https://nestjs.com/"
+  },
+  {
+    "name": "Pug",
+    "logo": "/pug.png",
+    "tag": "Tools",
+    "url": "https://pugjs.org/api/getting-started.html"
+  },
+  {
+    "name": "Digital Ocean",
+    "logo": "/digitalocean.png",
+    "tag": "Cloud",
+    "url": "https://m.do.co/c/dcad4def72a4"
+  },
+  {
+    "name": "Vercel",
+    "logo": "/vercel.svg",
+    "tag": "Cloud",
+    "url": "https://vercel.com/"
   }
 ]

@@ -15,8 +15,10 @@ import Pencil from "./Pencil";
 import ChevronDown from "./ChevronDown";
 import Upload from "./Upload";
 import ExternalLink from "./ExternalLink";
+import Theme from "./Theme";
 
 export {
+  Theme, 
   Upload,
   ChevronDown,
   Pencil,

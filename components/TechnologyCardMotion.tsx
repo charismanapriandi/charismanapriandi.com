@@ -10,6 +10,8 @@ const TechnologyCardMotion: FC<Components.Card.Technology> = ({image, name, url,
   <motion.a 
     layout
     href={url}
+    target='_blank'
+    rel='noreferrer'
     animate={cardMotion.active}
     initial={cardMotion.inactive}
     exit={cardMotion.inactive}

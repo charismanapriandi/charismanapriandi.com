@@ -16,6 +16,7 @@ const Logo: FC<Components.IconSvg> = ({ size = 165, ...props }) => {
   )
 }
 
+
 const pathCss = (theme: Theme) => css({
   fill: theme.palette.text.secondary
 })
