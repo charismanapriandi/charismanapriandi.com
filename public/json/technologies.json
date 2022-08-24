@@ -93,9 +93,24 @@
       "url": "https://www.figma.com/"
     },
     {
+      "name": "Termius",
+      "logo": "/termius.png",
+      "url": "https://termius.com/"
+    },
+    {
+      "name": "ITerm",
+      "logo": "/iterm.png",
+      "url": "https://iterm2.com/"
+    },
+    {
       "name": "VSCode",
       "logo": "/vscode.png",
       "url": "https://code.visualstudio.com/"
+    },
+    {
+      "name": "1Password",
+      "logo": "/1password.png",
+      "url": "https://1password.com/"
     },
     {
       "name": "Google Chrome",
