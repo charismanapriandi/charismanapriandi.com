@@ -15,7 +15,7 @@ const defaultValue: ColorScheme = {
 export const ColorSchemeContext = createContext<ColorScheme>(defaultValue)
 
 const ColorSchemeProvider: FC<{children: ReactNode}> = ({children}) => {
-  const [colorScheme, setColorScheme] = useState<'dark' | 'light'>('light')
+  const [colorScheme, setColorScheme] = useState<'dark' | 'light'>('dark')
   
   const handleColor = useCallback(() => {
     const theme = window.localStorage.getItem('theme')
@@ -25,9 +25,9 @@ const ColorSchemeProvider: FC<{children: ReactNode}> = ({children}) => {
         ? theme === 'dark' || theme === 'light' 
           ? theme
           : 'light'
-        : 'light')
+        : 'dark')
     
-    return () => setColorScheme('light')
+    return () => setColorScheme('dark')
   }, [])
   
   useEffect(() => {

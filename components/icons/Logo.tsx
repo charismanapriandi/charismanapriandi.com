@@ -1,4 +1,4 @@
-import { css, Theme } from "@emotion/react"
+import { css, Theme, useTheme } from "@emotion/react"
 import { FC, memo } from "react"
 
 const Logo: FC<Components.IconSvg> = ({ size = 165, ...props }) => {
