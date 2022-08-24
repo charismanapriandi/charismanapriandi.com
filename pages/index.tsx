@@ -25,7 +25,7 @@ const Home: NextPage = () => {
         </Button>
       </div>
       <div css={sectionCss}>
-        <RecordCard experienceCount={'2'} projectCount={'6+'} />
+        <RecordCard experienceCount={'2+'} projectCount={'6+'} />
       </div>
       {/* <div css={sectionCss} id='projects'>
         <Text css={{marginBottom: '20px'}} as='h2'>Projects</Text>
