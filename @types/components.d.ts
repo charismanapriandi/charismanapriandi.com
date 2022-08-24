@@ -114,8 +114,7 @@ declare namespace Components {
       projectCount: number;
     }
     export interface Technology {
-      image: string;
-      type: string;
+      logo: string;
       name: string;
       url: string;
       color: string;

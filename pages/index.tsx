@@ -27,12 +27,13 @@ const Home: NextPage = () => {
       <div css={sectionCss}>
         <RecordCard experienceCount={10} projectCount={100} />
       </div>
-      <div css={sectionCss}>
-        <Text css={{marginBottom: '20px'}} as='h2'>Latest Works</Text>
+      <div css={sectionCss} id='projects'>
+        <Text css={{marginBottom: '20px'}} as='h2'>Projects</Text>
         <ProjectList />
       </div>
-      <div css={sectionCss}>
-        <Text css={{marginBottom: '20px'}} as='h2'>Technology that i use</Text>
+      <div css={sectionCss} id='thinks'>
+        <Text as='h2'>Think</Text>
+        <Text>Think i realy like</Text>
         <TechnologyList />
       </div>
     </Layout.Primary>

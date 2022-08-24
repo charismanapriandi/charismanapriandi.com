@@ -4,10 +4,10 @@ import { FC } from 'react';
 import { Paper as BasePaper, Text } from '@/components';
 import Image from 'next/image';
 
-const TechnologyCard: FC<Components.Card.Technology> = ({image, name, url, color}) => (
+const TechnologyCard: FC<Components.Card.Technology> = ({logo, name, url, color}) => (
   <a href={url} rel='noreferrer' target='_blank'>
     <Paper color={color}>
-      <Image src={image} alt={name} width={40} height={40}/>
+      <Image src={logo} alt={name} width={40} height={40}/>
       <Text color='primary'>{name}</Text>
     </Paper>
   </a>

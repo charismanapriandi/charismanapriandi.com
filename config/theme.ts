@@ -15,7 +15,7 @@ const layout = {
     }
   },
   padding: '10px 20px',
-  borderRadius: '5px'
+  borderRadius: '10px'
 }
 
 export const theme: Theme = {

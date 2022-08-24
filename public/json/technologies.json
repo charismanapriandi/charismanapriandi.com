@@ -1,62 +1,66 @@
-[
-  {
-    "name": "Javascript",
-    "logo": "/javascript.png",
-    "tag": "Programming Language",
-    "url": "https://javascript.com"
-  },
-  {
-    "name": "Typescript",
-    "logo": "/typescript.png",
-    "tag": "Tools",
-    "url": "https://www.typescriptlang.org/"
-  },
-  {
-    "name": "React Js",
-    "logo": "/react-js.svg",
-    "tag": "Library",
-    "url": "https://reactjs.org"
-  },
-  {
-    "name": "Next Js",
-    "logo": "/next-js.svg",
-    "tag": "Framework",
-    "url": "https://nextjs.org"
-  },
-  {
-    "name": "Python",
-    "logo": "/python.png",
-    "tag": "Programming Language",
-    "url": "https://python.org"
-  },
-  {
-    "name": "Git",
-    "logo": "/git.png",
-    "tag": "Tools",
-    "url": "https://git-scm.com/"
-  },
-  {
-    "name": "Nest Js",
-    "logo": "/nest-js.png",
-    "tag": "Framework",
-    "url": "https://nestjs.com/"
-  },
-  {
-    "name": "Pug",
-    "logo": "/pug.png",
-    "tag": "Tools",
-    "url": "https://pugjs.org/api/getting-started.html"
-  },
-  {
-    "name": "Digital Ocean",
-    "logo": "/digitalocean.png",
-    "tag": "Cloud",
-    "url": "https://m.do.co/c/dcad4def72a4"
-  },
-  {
-    "name": "Vercel",
-    "logo": "/vercel.svg",
-    "tag": "Cloud",
-    "url": "https://vercel.com/"
-  }
-]
+{
+  "Development": [
+    {
+      "name": "Javascript",
+      "logo": "/javascript.png",
+      "url": "https://javascript.com"
+    },
+    {
+      "name": "Typescript",
+      "logo": "/typescript.png",
+      "url": "https://www.typescriptlang.org/"
+    },
+    {
+      "name": "React Js",
+      "logo": "/react-js.svg",
+      "url": "https://reactjs.org"
+    },
+    {
+      "name": "Next Js",
+      "logo": "/next-js.svg",
+      "url": "https://nextjs.org"
+    },
+    {
+      "name": "GitHub",
+      "logo": "/github.png",
+      "url": "https://github.com/"
+    },
+    {
+      "name": "Python",
+      "logo": "/python.png",
+      "url": "https://python.org"
+    },
+    {
+      "name": "Git",
+      "logo": "/git.png",
+      "url": "https://git-scm.com/"
+    },
+    {
+      "name": "Nest Js",
+      "logo": "/nest-js.png",
+      "url": "https://nestjs.com/"
+    },
+    {
+      "name": "Pug",
+      "logo": "/pug.png",
+      "url": "https://pugjs.org/api/getting-started.html"
+    },
+    {
+      "name": "Digital Ocean",
+      "logo": "/digitalocean.png",
+      "url": "https://m.do.co/c/dcad4def72a4"
+    },
+    {
+      "name": "Vercel",
+      "logo": "/vercel.svg",
+      "url": "https://vercel.com/"
+    }
+  ],
+  "Applications": [
+    {
+      "name": "Figma",
+      "logo": "/figma.png",
+      "url": "https://www.figma.com/"
+    }
+  ]
+}

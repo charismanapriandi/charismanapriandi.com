@@ -1,9 +1,8 @@
-import { Theme, useTheme } from "@emotion/react";
+import { css } from "@emotion/react";
 import styled from "@emotion/styled";
 import { ColorSchemeContext } from "context/ColorScheme";
 import Image from "next/image";
 import { useContext } from "react";
-import { Icon } from ".";
 import Grid from "./Grid";
 import Text from "./Text";
 
@@ -14,7 +13,6 @@ interface ThemeProps {
 
 const ThemeSwitcher2 = () => {
   const {colorScheme, setColorScheme} = useContext(ColorSchemeContext)
-  const theme = useTheme()
 
   const handleMode = (mode: Mode) => {
     setColorScheme(mode)
@@ -23,8 +21,8 @@ const ThemeSwitcher2 = () => {
 
   return (
     <Grid gap={10} isAutoFit={false} column={{default: 2}}>
-      <div>
-        <ThemeContainer isOn={colorScheme === 'light'}>
+      <div css={themeCss}>
+        <ImageContainer isOn={colorScheme === 'light'}>
           <Image
             css={{
               cursor: 'pointer', 
@@ -34,7 +32,7 @@ const ThemeSwitcher2 = () => {
             alt='light theme'
             objectFit="contain"
             layout='fill' />
-        </ThemeContainer>
+        </ImageContainer>
         <Text 
           color={
             colorScheme === 'light' 
@@ -47,8 +45,8 @@ const ThemeSwitcher2 = () => {
           Light
         </Text>
       </div>
-      <div>
-        <ThemeContainer isOn={colorScheme === 'dark'}>
+      <div css={themeCss}>
+        <ImageContainer isOn={colorScheme === 'dark'}>
           <Image
             css={{
               cursor: 'pointer',
@@ -58,7 +56,7 @@ const ThemeSwitcher2 = () => {
             objectFit="contain"
             alt='dark theme'
             layout="fill" />
-        </ThemeContainer>
+        </ImageContainer>
         <Text
           color={
             colorScheme === 'dark' 
@@ -75,7 +73,7 @@ const ThemeSwitcher2 = () => {
   )
 }
 
-const ThemeContainer = styled.div<ThemeProps>(({theme, isOn}) => ({
+const ImageContainer = styled.div<ThemeProps>(({theme, isOn}) => ({
   boxShadow: isOn ? `0 0 0 3px ${theme.palette.color.primary}` : '0 0 0 0 transparent',
   borderRadius: '8px',
   transition: 'all .3s ease-in-out',
@@ -85,5 +83,11 @@ const ThemeContainer = styled.div<ThemeProps>(({theme, isOn}) => ({
   position: 'relative',
   marginBottom: '5px'
 }))
+
+const themeCss = css({
+  display: 'flex',
+  alignItems: 'center',
+  flexDirection: 'column'
+})
 
 export default ThemeSwitcher2;

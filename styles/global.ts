@@ -6,7 +6,7 @@ const globalStyles = (theme: Theme) => css`
   html,
   body {
     font-family: 'Poppins', sans-serif;
-    background-color: ${theme.palette.background.primary}
+    background-image: linear-gradient(90deg, ${theme.palette.background.primary}, ${theme.palette.background.secondary})
   }
 
   a {

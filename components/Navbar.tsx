@@ -1,10 +1,22 @@
 import styled from '@emotion/styled';
-import { FC, memo } from 'react';
-import { Container, Icon, Row, SocialMediaList, ThemeSwitcher2, Text } from '@/components';
+import { FC, memo, useEffect } from 'react';
+import { Container, Icon, Row, SocialMediaList, ThemeSwitcher2, Text, Divider } from '@/components';
 import { motion } from 'framer-motion'
 import { css, Theme } from '@emotion/react';
+import Link from 'next/link';
 
 const Navbar: FC<any> = () => {
+  const toProjects = () => {
+    const target = document.querySelector('#projects')
+    const top = target ? target.getBoundingClientRect().top : 0 + document.documentElement.scrollTop;
+
+    scrollTo(0, top)
+  }
+
+  const toThinks = () => {
+
+  }
+  
   return (
     <>
       <Nav>
@@ -24,7 +36,29 @@ const Navbar: FC<any> = () => {
                 variants={menuMotion}
                 css={dropMenuCss}>
                 <Text 
-                  css={{marginBottom: '15px'}} 
+                  css={{marginBottom: '10px'}} 
+                  weight={500} 
+                  color='primary' 
+                  size='small'>
+                  Links
+                </Text>
+                <Text 
+                  onClick={toProjects}
+                  css={{marginBottom: '5px'}} 
+                  weight={300} 
+                  size='small'>
+                  Projects
+                </Text>
+                <Text 
+                  onClick={toThinks}
+                  css={{marginBottom: '5px'}} 
+                  weight={300} 
+                  size='small'>
+                  Thinks
+                </Text>
+                <Divider spacing={10} />
+                <Text 
+                  css={{marginBottom: '10px'}} 
                   weight={500} 
                   color='primary' 
                   size='small'>
@@ -57,7 +91,8 @@ const dropMenuCss = (theme: Theme) => css({
   cursor: 'auto',
   borderRadius: theme.borderRadius,
   right: 0,
-  maxWidth: '300px',
+  border: `1px solid ${theme.palette.color.border}`,
+  width: '280px',
 })
 
 const menuMotion = {
