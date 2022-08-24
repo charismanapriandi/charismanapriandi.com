@@ -25,15 +25,15 @@ const Home: NextPage = () => {
         </Button>
       </div>
       <div css={sectionCss}>
-        <RecordCard experienceCount={10} projectCount={100} />
+        <RecordCard experienceCount={'2'} projectCount={'6+'} />
       </div>
-      <div css={sectionCss} id='projects'>
+      {/* <div css={sectionCss} id='projects'>
         <Text css={{marginBottom: '20px'}} as='h2'>Projects</Text>
         <ProjectList />
-      </div>
+      </div> */}
       <div css={sectionCss} id='thinks'>
         <Text as='h2'>Think</Text>
-        <Text>Think i realy like</Text>
+        <Text>Think I realy like</Text>
         <TechnologyList />
       </div>
     </Layout.Primary>

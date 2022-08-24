@@ -36,6 +36,14 @@ const SocialMediaList = () => {
           </motion.div>
         </IconContainerMotion>
       </a>
+      <a href='https://github.com/charismanapriandi?tab=overview&from=2022-08-01&to=2022-08-24' target='_blank' rel='noreferrer'>
+        <IconContainerMotion initial='inactive' animate='inactive' whileHover='active'>
+          <Icon.Github size={30}/>
+          <motion.div layout transition={{type: 'tween'}} variants={(iconTextVariant as any)}>
+            <Text css={{marginLeft: '10px'}}>Github</Text>
+          </motion.div>
+        </IconContainerMotion>
+      </a>
     </div>
   )
 }

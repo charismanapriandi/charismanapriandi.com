@@ -110,8 +110,8 @@ declare namespace Components {
       description: string;
     }
     export interface Record {
-      experienceCount: number;
-      projectCount: number;
+      experienceCount: string;
+      projectCount: string;
     }
     export interface Technology {
       logo: string;

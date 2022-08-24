@@ -12,21 +12,10 @@ const Navbar: FC<any> = () => {
   const menuRef = useRef(null)
   
   const handleCloseMenu = () => setIsOpen(false)
+  const toggleMenu = () => setIsOpen(prev => !prev)
   
   useClickOutside(menuRef, handleCloseMenu)
   
-  const toProjects = () => {
-    const target = document.querySelector('#projects')
-    const top = target ? target.getBoundingClientRect().top : 0 + document.documentElement.scrollTop;
-
-    scrollTo(0, top)
-  }
-
-  const toThinks = () => {
-
-  }
-
-  const handleMenu = () => setIsOpen(prev => !prev)
   
   return (
     <>
@@ -44,35 +33,14 @@ const Navbar: FC<any> = () => {
                   ? `0 0 0 3px ${theme.palette.color.primary}7F` 
                   : 'none'
                 }} 
-                onClick={handleMenu} 
+                onClick={toggleMenu} 
                 size={35}/>
               <motion.div
                 animate={isOpen ? menuMotion.animate : menuMotion.initial}
                 css={dropMenuCss}>
+                {/* <Divider spacing={10} /> */}
                 <Text 
-                  css={{marginBottom: '10px'}} 
-                  weight={500} 
-                  color='primary' 
-                  size='small'>
-                  Links
-                </Text>
-                <Text 
-                  onClick={toProjects}
-                  css={{marginBottom: '5px'}} 
-                  weight={300} 
-                  size='small'>
-                  Projects
-                </Text>
-                <Text 
-                  onClick={toThinks}
-                  css={{marginBottom: '5px'}} 
-                  weight={300} 
-                  size='small'>
-                  Thinks
-                </Text>
-                <Divider spacing={10} />
-                <Text 
-                  css={{marginBottom: '10px'}} 
+                  css={{marginBottom: '15px'}} 
                   weight={500} 
                   color='primary' 
                   size='small'>

@@ -54,12 +54,59 @@
       "name": "Vercel",
       "logo": "/vercel.svg",
       "url": "https://vercel.com/"
+    },
+    {
+      "name": "Material UI",
+      "logo": "/mui.svg",
+      "url": "https://mui.com/"
+    },
+    {
+      "name": "Emotion",
+      "logo": "/emotion.png",
+      "url": "https://emotion.sh/docs/introduction"
+    },
+    {
+      "name": "Webpack",
+      "logo": "/webpack.png",
+      "url": "https://webpack.js.org/"
+    },
+    {
+      "name": "Express Js",
+      "logo": "/express-js.png",
+      "url": "https://expressjs.com/"
+    },
+    {
+      "name": "Sass",
+      "logo": "/sass.png",
+      "url": "https://sass-lang.com/"
+    },
+    {
+      "name": "PostgreSQL",
+      "logo": "/postgresql.png",
+      "url": "https://www.postgresql.org/"
     }
   ],
   "Applications": [
     {
       "name": "Figma",
       "logo": "/figma.png",
+      "url": "https://www.figma.com/"
+    },
+    {
+      "name": "VSCode",
+      "logo": "/vscode.png",
+      "url": "https://code.visualstudio.com/"
+    },
+    {
+      "name": "Google Chrome",
+      "logo": "/chrome.png",
+      "url": "https://www.google.com/chrome/?brand=YTUH&gclid=CjwKCAjwmJeYBhAwEiwAXlg0AdFZ-EbBbubVKGa0aTbwljDR1krLBLCt0sPw5tYr9Hz4E-5i9vSjmhoCe5wQAvD_BwE&gclsrc=aw.ds"
+    }
+  ],
+  "Games": [
+    {
+      "name": "Apex Legends Mobile",
+      "logo": "/apex-legend.png",
       "url": "https://www.figma.com/"
     }
   ]
