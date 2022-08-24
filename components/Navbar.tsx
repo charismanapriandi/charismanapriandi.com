@@ -1,11 +1,20 @@
 import styled from '@emotion/styled';
-import { FC, memo, useEffect } from 'react';
+import { FC, memo, useEffect, useRef, useState } from 'react';
 import { Container, Icon, Row, SocialMediaList, ThemeSwitcher2, Text, Divider } from '@/components';
 import { motion } from 'framer-motion'
-import { css, Theme } from '@emotion/react';
+import { css, Theme, useTheme } from '@emotion/react';
 import Link from 'next/link';
+import useClickOutside from 'hook/useClickDetection';
 
 const Navbar: FC<any> = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false)
+  const theme = useTheme();
+  const menuRef = useRef(null)
+  
+  const handleCloseMenu = () => setIsOpen(false)
+  
+  useClickOutside(menuRef, handleCloseMenu)
+  
   const toProjects = () => {
     const target = document.querySelector('#projects')
     const top = target ? target.getBoundingClientRect().top : 0 + document.documentElement.scrollTop;
@@ -16,6 +25,8 @@ const Navbar: FC<any> = () => {
   const toThinks = () => {
 
   }
+
+  const handleMenu = () => setIsOpen(prev => !prev)
   
   return (
     <>
@@ -24,16 +35,19 @@ const Navbar: FC<any> = () => {
           <Row
             alignItems='center' 
             justifyContent='flex-end'>
-            <motion.div
-              css={triggerCss} 
-              layout
-              animate='initial'
-              initial='initial'
-              whileHover='hover'
-              transition={triggerTransition}>
-              <Icon.Menu size={25}/>
+            <div css={menuWrapperCss} ref={menuRef}>
+              <Icon.Menu css={{
+                padding: '5px', 
+                transition: 'all .3s ease-in-out',
+                borderRadius: '5px',
+                boxShadow: isOpen 
+                  ? `0 0 0 3px ${theme.palette.color.primary}7F` 
+                  : 'none'
+                }} 
+                onClick={handleMenu} 
+                size={35}/>
               <motion.div
-                variants={menuMotion}
+                animate={isOpen ? menuMotion.animate : menuMotion.initial}
                 css={dropMenuCss}>
                 <Text 
                   css={{marginBottom: '10px'}} 
@@ -66,7 +80,7 @@ const Navbar: FC<any> = () => {
                 </Text>
                 <ThemeSwitcher2 />
               </motion.div>
-            </motion.div>
+            </div>
           </Row>
         </Container.Large>
       </Nav>
@@ -105,7 +119,7 @@ const menuMotion = {
       type: "spring",
     }
   },
-  hover: {
+  animate: {
     opacity: 1,
     scale: 1,
     x: 0,
@@ -116,7 +130,7 @@ const menuMotion = {
   }
 }
 
-const triggerCss = css({
+const menuWrapperCss = css({
   pointerEvents: 'auto', 
   cursor: 'pointer',
   position: 'relative',

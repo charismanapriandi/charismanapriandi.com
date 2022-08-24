@@ -55,6 +55,7 @@ const Paper = styled(motion.a)(({theme, color}) => ({
   gap: '20px',
   width: 'auto',
   transition: 'all .3s ease-in-out',
+  backgroundColor: theme.palette.background.secondary,
   borderRadius: theme.borderRadius,
   ':focus': {
     outline: 'none'
