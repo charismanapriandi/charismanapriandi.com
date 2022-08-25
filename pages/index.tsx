@@ -5,10 +5,8 @@ import { css } from '@emotion/react'
 import Head from 'next/head'
 
 const text = {
-  title: 'A fullstack javascript programmer focused on website development',
-  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tincidunt tempor congue. Praesent velit nibh, rhoncus eget ante sit amet, tempor luctus diam. Quisque porta tempus arcu non porta.'
+  description: 'A fullstack javascript programmer focused on website development'
 }
-
 
 const Home: NextPage = () => {
   
@@ -20,7 +18,9 @@ const Home: NextPage = () => {
       <Layout.Primary isPaddingTop={false}>
         <div css={heroCss}>
           <Text css={{maxWidth: '800px'}} as='h1'>
-            {text.title}
+            Work For Passion. <br />
+            Code For Users. <br />
+            Live For Family. <br />
           </Text>
           <Text css={{maxWidth: '800px', marginTop: '30px', wordSpacing: '3px'}}>
             {text.description}

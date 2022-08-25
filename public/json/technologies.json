@@ -26,6 +26,11 @@
       "url": "https://github.com/"
     },
     {
+      "name": "K6",
+      "logo": "/k6.png",
+      "url": "https://k6.io/"
+    },
+    {
       "name": "Python",
       "logo": "/python.png",
       "url": "https://python.org"
@@ -44,6 +49,11 @@
       "name": "Pug",
       "logo": "/pug.png",
       "url": "https://pugjs.org/api/getting-started.html"
+    },
+    {
+      "name": "Redux",
+      "logo": "/redux.png",
+      "url": "https://redux.js.org/"
     },
     {
       "name": "Digital Ocean",
@@ -122,7 +132,7 @@
     {
       "name": "Apex Legends Mobile",
       "logo": "/apex-legend.png",
-      "url": "https://www.figma.com/"
+      "url": "https://play.google.com/store/apps/details?id=com.ea.gp.apexlegendsmobilefps&hl=en&gl=US"
     }
   ]
 }
