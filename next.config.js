@@ -21,6 +21,7 @@ const nextConfig = {
   swcMinify: true,
   env: {
     BASE_API_URL: process.env.BASE_API_URL,
+    G_TAG: process.env.G_TAG,
   },
   images: {
     domains: ['localhost'],

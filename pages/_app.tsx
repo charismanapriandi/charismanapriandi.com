@@ -5,12 +5,29 @@ import { darkTheme, theme } from 'config/theme'
 import ColorSchemeProvider, { ColorSchemeContext } from 'context/ColorScheme'
 import { FC, useContext } from 'react'
 import globalStyles from 'styles/global'
+import Script from 'next/script';
 
 function App(props: AppProps) {
   return (
-    <ColorSchemeProvider>
-      <ThemeController {...props}/>
-    </ColorSchemeProvider>
+    <>
+       <Script
+          strategy="lazyOnload"
+          src={`https://www.googletagmanager.com/gtag/js?id=${process.env.G_TAG}`}
+        />
+        <Script id="google-analytics" strategy="lazyOnload">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.G_TAG}', {
+              page_path: window.location.pathname,
+            });
+          `}
+        </Script>
+      <ColorSchemeProvider>
+        <ThemeController {...props}/>
+      </ColorSchemeProvider>
+    </>
   )
 }
 
