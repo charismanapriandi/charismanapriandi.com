@@ -1,6 +1,7 @@
 /** @jsxImportSource @emotion/react */
 import type { NextPage } from 'next'
 import { Button, Icon, Layout, ProjectList, RecordCard, TechnologyList, Text } from '@/components'
+import Link from 'next/link';
 import { css } from '@emotion/react'
 import Head from 'next/head'
 
@@ -22,12 +23,20 @@ const Home: NextPage = () => {
             Code For Users. <br />
             Live For Family. <br />
           </Text>
-          <Text css={{maxWidth: '800px', marginTop: '30px', wordSpacing: '3px'}}>
+          <Text css={{
+            maxWidth: '800px', 
+            marginTop: '30px', 
+            marginBottom: '50px', 
+            wordSpacing: '3px'}}>
             {text.description}
           </Text>
-          <Button css={{marginTop: '50px'}}>
-            <Icon.Download css={{marginRight: '20px', color: '#FFFFFF'}} size={24} /> Curriculum Vitae
-          </Button>
+          <Link css={{width: 'fit-content'}} href='https://drive.google.com/file/d/1qnyWVCA7qJN9MdJuCjwvGznlNcXutwLZ/view?usp=sharing' passHref>
+            <a css={{width: 'fit-content'}} target='_blank' rel='noreferrer'>
+              <Button>
+                <Icon.Download css={{marginRight: '20px', color: '#FFFFFF'}} size={24} /> Curriculum Vitae
+              </Button>
+            </a>
+          </Link>
         </div>
         <div css={sectionCss}>
           <RecordCard experienceCount={'2+'} projectCount={'5+'} />
