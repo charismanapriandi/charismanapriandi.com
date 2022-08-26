@@ -51,6 +51,11 @@
       "url": "https://pugjs.org/api/getting-started.html"
     },
     {
+      "name": "Postman",
+      "logo": "/postman.png",
+      "url": "https://www.postman.com/"
+    },
+    {
       "name": "Redux",
       "logo": "/redux.png",
       "url": "https://redux.js.org/"
