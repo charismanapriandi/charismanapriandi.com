@@ -8,12 +8,12 @@ const RecordCard: FC<Components.Card.Record> = ({experienceCount, projectCount})
   <CustomPaper>
     <div>
       <Text size={54} weight={500} color='primary' textAlign='center'>{experienceCount}</Text>
-      <Text textAlign='center'>Years Experience</Text>
+      <Text textAlign='center'>Years Experiences</Text>
     </div>
     <CustomDivider />
     <div>
       <Text size={54} weight={500} color='primary' textAlign='center'>{projectCount}</Text>
-      <Text textAlign='center'>Project Worked</Text>
+      <Text textAlign='center'>Project Finished</Text>
     </div>
   </CustomPaper>
 )

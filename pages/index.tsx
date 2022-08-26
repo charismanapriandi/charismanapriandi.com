@@ -39,7 +39,7 @@ const Home: NextPage = () => {
           </Link>
         </div>
         <div css={sectionCss}>
-          <RecordCard experienceCount={'2+'} projectCount={'5+'} />
+          <RecordCard experienceCount={'2+'} projectCount={'9+'} />
         </div>
         {/* <div css={sectionCss} id='projects'>
           <Text css={{marginBottom: '20px'}} as='h2'>Projects</Text>

@@ -2,6 +2,6 @@ node_modules
 .next
 
 # ENV 
-.env
+.env.local
 .env.development
 .env.production
