@@ -33,9 +33,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: | 
-            sudo ln -s "$NVM_DIR/versions/node/0.39.1/bin/node" "/usr/local/bin/node"
-            sudo ln -s "$NVM_DIR/versions/node/0.39.1/bin/npm" "/usr/local/bin/npm"
-            sudo ln -s "$NVM_DIR/versions/node/0.39.1/bin/pm2" "/usr/local/bin/pm2"
-            pm2 restart ${{ secrets.APP_NAME }}
+          script: pm2 restart ${{ secrets.APP_NAME }}
  
