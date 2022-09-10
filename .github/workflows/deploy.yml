@@ -7,8 +7,8 @@ jobs:
     name: Build & Deploy for Production
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v2
+      - name: Checkout the Code
+        uses: actions/checkout@v3
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
@@ -25,7 +25,6 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET }}
-          EXCLUDE: "/dist/, /node_modules/"
       - name: executing remote ssh
         uses: appleboy/ssh-action@master
         with:
@@ -33,5 +32,9 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.KEY }}
           port: ${{ secrets.PORT }}
-          script: node -v
+          script: |
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh    
+            PATH="/usr/local/go/bin/:$PATH"
+            node -v
  
