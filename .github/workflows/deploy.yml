@@ -1,29 +1,37 @@
-name: Production
+name: Production Deployment
 on:
   push:
-    branches: [ "master" ]
-  workflow_dispatch:
+    branches: [master]
 jobs:
-  deploy:
+  build:
+    name: Build & Deploy for Production
     runs-on: ubuntu-latest
-    # steps:
-    #   - name: Checkout the code
-    #     uses: actions/checkout@v3
-      # - name: Install Node.js
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     node-version: '16.13.2'
-      # - name: Install yarn
-      #   run: npm install -g yarn
-      # - name: Install dependencies
-      #   run: yarn install
-      # - name: Build
-      #   run: yarn build
-      # - name: Executing remote ssh
-      #   uses: appleboy/ssh-action@master
-      #   with:
-      #     host: ${{ secrets.SSH_HOST }}
-      #     key: ${{ secrets.SSH_KEY }}
-      #     username: ${{ secrets.SSH_USERNAME }}
-      #     script: |
-      #       echo $TEST
+    steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '16.13.2'
+      - name: Install & Build
+        run: |
+          npm install
+          npm run build
+      - name: Deploy to Server
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
+          SOURCE: "./"
+          REMOTE_HOST: ${{ secrets.HOST }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.TARGET }}
+          EXCLUDE: "/dist/, /node_modules/"
+      - name: executing remote ssh
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: whoami
+

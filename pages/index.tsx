@@ -1,17 +1,11 @@
 /** @jsxImportSource @emotion/react */
 import type { NextPage } from 'next'
-import { Button, Icon, Layout, ProjectList, RecordCard, TechnologyList, Text } from '@/components'
+import { Button, Icon, Layout, ProjectList, RecordCard, TechnologyList, Text, ThemeSwitcher2 } from '@/components'
 import Link from 'next/link';
 import { css } from '@emotion/react'
 import Head from 'next/head'
 
-const text = {
-  description: 'A fullstack javascript programmer focused on website development'
-}
-
-const Home: NextPage = () => {
-  
-  return (
+const Home: NextPage = () => (
     <>
       <Head>
         <title>Charisman Apriandi</title>
@@ -28,7 +22,7 @@ const Home: NextPage = () => {
             marginTop: '30px', 
             marginBottom: '50px', 
             wordSpacing: '3px'}}>
-            {text.description}
+            Fullstack javascript developer (frontend-heavy) with 2 years of experience in web development
           </Text>
           <Link css={{width: 'fit-content'}} href='https://drive.google.com/file/d/1qnyWVCA7qJN9MdJuCjwvGznlNcXutwLZ/view?usp=sharing' passHref>
             <a css={{width: 'fit-content'}} target='_blank' rel='noreferrer'>
@@ -53,7 +47,6 @@ const Home: NextPage = () => {
       </Layout.Primary>
     </>
   )
-}
 
 const sectionCss = css({
   margin: '100px 0'
