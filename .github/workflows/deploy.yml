@@ -35,6 +35,6 @@ jobs:
           script: |
             export NVM_DIR=~/.nvm
             source ~/.nvm/nvm.sh    
-            PATH="/usr/local/go/bin/:$PATH"
-            node -v
+            PATH="/usr/bin/node/:$PATH"
+            pm2 restart ${{ secrets.PM2_ID }}
  
