@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { memo } from "react";
 import breakpoint from "styles/breakpoint";
+import Item from "./Item";
 
 const Grid = styled.div<Components.Grid>`
   display: grid;
@@ -27,4 +28,6 @@ const Grid = styled.div<Components.Grid>`
   }
 `
 
-export default memo(Grid)
+export default Object.assign(memo(Grid), {
+  Item,
+})

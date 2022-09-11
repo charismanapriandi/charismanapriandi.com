@@ -105,7 +105,7 @@ declare namespace Components {
   }
   declare namespace Card {
     export interface Project {
-      technologies: Data.Technology[];
+      logo: string;
       name: string;
       description: string;
     }

@@ -4,25 +4,12 @@ import styled from "@emotion/styled";
 import breakpoint from "styles/breakpoint";
 import Image from 'next/image';
 
-const ProjectCard: FC<Components.Card.Project> = ({name, description, technologies }) => {
+const ProjectCard: FC<Components.Card.Project> = ({name, description, logo }) => {
   return (
     <ProjectPaper>
-      <Text as='h3'>{name}</Text>
+      <Image src={logo} alt={`${name} logo`} width={50} height={50} />
+      <Text as='h3' size={20}>{name}</Text>
       <Text>{description}</Text>
-      <Row css={{marginTop: '20px'}} alignItems="center" gap={10} flexWrap='wrap'>
-        {
-          technologies
-          && technologies.length > 0 
-          && technologies.map((item, index) => (
-            <Image 
-              src={item.logo} 
-              key={index} 
-              width={25} 
-              height={25} 
-              alt={item.name} />
-          ))
-        }
-      </Row>
     </ProjectPaper>
   )
 }
@@ -30,13 +17,19 @@ const ProjectCard: FC<Components.Card.Project> = ({name, description, technologi
 const ProjectPaper = styled(Paper)(({theme}) => ({
   cursor: 'pointer',
   height: '100%',
+  boxShadow: `0 0 0 1px ${theme.palette.color.border}`,
   'h3': {
+    marginTop: '20px',
     transition: 'all .3s ease-in-out'
   },
   ':hover': {
     'h3': {
       color: theme.palette.text.highlight
     }
+  },
+  'p': {
+    marginTop: '15px',
+    lineHeight: '29px'
   },
   [`${breakpoint('sm')}`]: {
     padding: '20px',

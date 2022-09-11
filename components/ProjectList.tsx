@@ -2,46 +2,32 @@ import { memo } from "react"
 import { ProjectCard, Grid, Loading, Button } from "@/components";
 import { useState } from "react";
 import Link from "next/link";
+import projects from 'public/json/projects.json'
 
-const ProjectList = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-  const [projects, setProjects] = useState<any>([])
-  const [currentPage, setCurrentPage] = useState<number>(0)
-  const [isLoadMore, setIsLoadMore] = useState<boolean>(true)
-  
-  return (
-    <>
-      <Grid 
-        isAutoFit={false} 
-        css={{marginBottom: '20px'}} 
-        column={{
-          default: 1,
-          sm: 2,
-          md: 3
-        }}
-        gap={20}>
-        {projects.map((item: any, index: string) => (
-          <Link key={index} href={item.url} passHref>
-            <a>
+const ProjectList = () => (
+  <Grid 
+    isAutoFit={false} 
+    css={{marginBottom: '20px'}} 
+    column={{
+      default: 1,
+      sm: 2,
+      md: 3
+    }}
+    gap={20}>
+    {projects.map((item: any, index: any) => (
+      <Grid.Item key={index}>
+        <Link href={item.href} passHref>
+            <a target='_blank'>
               <ProjectCard 
-                technologies={item.technologies}
+                logo={item.logo}
                 name={item.name} 
-                description={item.description}/>
+                description={item.desc}/>
             </a>
           </Link>
-        ))}
-      </Grid>
-      {isLoading
-        ? (
-          <Loading />
-        )
-        : isLoadMore 
-          &&  <Button disabled={isLoading} variant="text">
-                Load More
-              </Button>
-        }
-    </>
-  )
-}
+      </Grid.Item>
+    ))}
+  </Grid>
+)
+
 
 export default memo(ProjectList);

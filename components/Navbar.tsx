@@ -38,7 +38,6 @@ const Navbar: FC<any> = () => {
               <motion.div
                 animate={isOpen ? menuMotion.animate : menuMotion.initial}
                 css={dropMenuCss}>
-                {/* <Divider spacing={10} /> */}
                 <Text 
                   css={{marginBottom: '15px'}} 
                   weight={500} 
@@ -75,6 +74,7 @@ const dropMenuCss = (theme: Theme) => css({
   right: 0,
   border: `1px solid ${theme.palette.color.border}`,
   width: '280px',
+  opacity: 0,
 })
 
 const menuMotion = {
