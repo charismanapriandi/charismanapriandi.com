@@ -133,6 +133,18 @@
       "url": "https://www.google.com/chrome/?brand=YTUH&gclid=CjwKCAjwmJeYBhAwEiwAXlg0AdFZ-EbBbubVKGa0aTbwljDR1krLBLCt0sPw5tYr9Hz4E-5i9vSjmhoCe5wQAvD_BwE&gclsrc=aw.ds"
     }
   ],
+  "Services": [
+    {
+      "name": "Jira",
+      "logo": "/jira.png",
+      "url": "https://www.atlassian.com/software/jira"
+    },
+    {
+      "name": "Confluence",
+      "logo": "/confluence.svg",
+      "url": "https://www.atlassian.com/software/confluence"
+    }
+  ],
   "Games": [
     {
       "name": "Apex Legends Mobile",
