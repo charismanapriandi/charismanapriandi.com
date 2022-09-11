@@ -1,5 +1,5 @@
 import React, { memo } from "react"
-import { TechnologyCardMotion, Grid, Text } from "."
+import { TechnologyCard, Grid, Text } from "."
 import technologies from '../public/json/technologies.json'
 
 const TechnologyList = () => {
@@ -18,12 +18,13 @@ const TechnologyList = () => {
             css={{marginTop: '20px'}} 
             gap={10}>
             {((technologies as any)[key] as Components.Card.Technology[]).map((item, idx) => (
-              <TechnologyCardMotion 
-                key={idx} 
-                color='transparent' 
-                logo={item.logo} 
-                name={item.name} 
-                url={item.url} />
+              <Grid.Item key={idx}>
+                <TechnologyCard 
+                  color='transparent' 
+                  logo={item.logo} 
+                  name={item.name} 
+                  url={item.url} />
+              </Grid.Item>
             ))}
           </Grid>
         </React.Fragment>

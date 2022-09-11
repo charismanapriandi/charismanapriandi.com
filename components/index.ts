@@ -1,6 +1,5 @@
 import * as Icon from './icons'
 import * as Layout from "./layout";
-import * as Motion from "./Motion";
 import * as Container from "./Container";
 import Navbar from "./Navbar";
 
@@ -16,7 +15,6 @@ import Text from "./Text";
 import ThemeSwitcher from "./ThemeSwitcher";
 import SocialMediaList from "./SocialMediaList";
 import TechnologyList from "./TechnologyList";
-import TechnologyCardMotion from "./TechnologyCardMotion";
 import ProjectCard from "./ProjectCard";
 import ProjectList from "./ProjectList";
 import RecordCard from "./RecordCard";
@@ -36,7 +34,6 @@ export {
   List,
   Brand,
   Footer,
-  Motion,
   Loading,
   Tag,
   Toggle,
@@ -57,5 +54,4 @@ export {
   ThemeSwitcher,
   SocialMediaList,
   TechnologyList,
-  TechnologyCardMotion,
 }
