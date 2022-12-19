@@ -1,8 +1,8 @@
 [
   {
-    "name": "Scraper Buddy",
-    "logo": "/scraper-buddy.png",
-    "desc": "Scraper Buddy allows you to retrieve detailed apps and reviews from Google Play Store.",
-    "href": "https://rapidapi.com/charismanapriandi/api/scraper-buddy1/"
+    "name": "Keo Countries",
+    "logo": "/keo-countries-api.png",
+    "desc": "KeoCountries is an api to get the list of countries, states, cities, with easy queries.",
+    "href": "https://rapidapi.com/charismanapriandi/api/keocountries/"
   }
 ]

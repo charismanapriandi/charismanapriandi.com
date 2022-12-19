@@ -7,7 +7,7 @@ import Image from 'next/image';
 const ProjectCard: FC<Components.Card.Project> = ({name, description, logo }) => {
   return (
     <ProjectPaper>
-      <Image src={logo} alt={`${name} logo`} width={50} height={50} />
+      <Image style={{ borderRadius: '10px' }} src={logo} alt={`${name} logo`} width={50} height={50} />
       <Text as='h3' size={20}>{name}</Text>
       <Text>{description}</Text>
     </ProjectPaper>
