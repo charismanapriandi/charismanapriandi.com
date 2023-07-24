@@ -24,7 +24,7 @@ const nextConfig = {
     G_TAG: process.env.G_TAG,
   },
   images: {
-    domains: ['localhost'],
+    domains: ['localhost', 'd33wubrfki0l68.cloudfront.net', 'mobx.js.org'],
   }
 }
 

@@ -1,60 +1,177 @@
 /** @jsxImportSource @emotion/react */
 import type { NextPage } from 'next'
-import { Button, Icon, Layout, ProjectList, RecordCard, TechnologyList, Text } from '@/components'
-import Link from 'next/link';
-import { css } from '@emotion/react'
+import { Container, Layout, ProjectList, TechnologyList, Text } from '@/components'
+import { Theme, css, useTheme } from '@emotion/react'
 import Head from 'next/head'
+import Typed from 'react-typed';
+import { useEffect, useRef, useState } from 'react';
+import { motion } from 'framer-motion';
+import CollaborateList from 'components/CollaborateList';
+import breakpoint from 'styles/breakpoint';
+import Navigation from 'components/Navigation';
 
-const Home: NextPage = () => (
-  <>
-    <Head>
-      <title>Charisman Apriandi</title>
-      <link rel='icon' href='/favicon.ico' />
-    </Head>
-    <Layout.Primary isPaddingTop={false}>
-      <div css={heroCss}>
-        <Text css={{maxWidth: '800px'}} as='h1'>
-          Work For Passion. <br />
-          Code For Users. <br />
-          Live For Family. <br />
-        </Text>
-        <Text css={{
-          maxWidth: '800px', 
-          marginTop: '30px', 
-          marginBottom: '50px', 
-          wordSpacing: '3px'}}>
-          I am a fullstack javascript developer (frontend-heavy) with 2 years of experience in web development
-        </Text>
-        <Link css={{width: 'fit-content'}} href='https://drive.google.com/file/d/1qnyWVCA7qJN9MdJuCjwvGznlNcXutwLZ/view?usp=sharing' passHref>
-          <a css={{width: 'fit-content'}} target='_blank' rel='noreferrer'>
-            <Button>
-              <Icon.Download css={{marginRight: '20px', color: '#FFFFFF'}} size={24} /> Curriculum Vitae
-            </Button>
-          </a>
-        </Link>
-      </div>
-      <div css={sectionCss}>
-        <RecordCard experienceCount={'2+'} projectCount={'9+'} />
-      </div>
-      <div css={sectionCss} id='projects'>
-        <Text css={{marginBottom: '40px'}} as='h2'>Projects</Text>
-        <ProjectList />
-      </div>
-      <div css={sectionCss} id='thinks'>
-        <Text as='h2'>Think</Text>
-        <Text>Think I realy like</Text>
-        <TechnologyList />
-      </div>
-    </Layout.Primary>
-  </>
-)
+const Home: NextPage = () => {
+  const theme = useTheme()
+  const thinkSectionRef = useRef<HTMLDivElement>(null)
+  const [thinkSectionShadow, setThinkSectionShadow] = useState(0)
+  
+  useEffect(() => {
+    window.addEventListener('scroll', function() {
+      const screenHeight = this.window.screen.height;
+      const thinkSectionTopPosition = thinkSectionRef.current?.getBoundingClientRect().top
 
-const sectionCss = css({
-  margin: '100px 0'
+      if (!thinkSectionTopPosition) return
+      
+      if (thinkSectionTopPosition - screenHeight < 0) {
+        setThinkSectionShadow(Math.abs(thinkSectionTopPosition - screenHeight) / 2)
+      }
+    })
+  }, [])
+  
+  return (
+    <>
+      <Head>
+        <title>Charisman Apriandi - Fullstack Developer</title>
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+      <Layout.Primary isPaddingTop={false}>
+        <Container.Default css={heroCss}>
+          <motion.div initial={{ opacity: 0, y: '6rem' }} animate={{ opacity: 1, y: '0rem' }}>
+            <Text textAlign='center' css={{ marginBottom: 15 }}>Hi, i&lsquo;m Risman</Text>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: '6rem' }} animate={{ opacity: 1, y: '0rem' }} transition={{ delay: .1 }}>
+            <Text textAlign='center' as='h1' css={{ marginBottom: 20, fontWeight: 900 }}>
+              Building {' '}
+              <motion.div
+                css={{ 
+                  display: 'inline-block',
+                  // background: `-webkit-linear-gradient(90deg, #000428, ${theme.palette.color.primary})`,
+                  background: `linear-gradient(135deg, #063893, ${theme.palette.color.primary})`,
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  fontWeight: 900,
+                  position: 'relative',
+                  ':hover': {
+                    '.frame': {
+                      opacity: .7
+                    }
+                  }
+                }} 
+                drag
+                whileHover={{
+                  rotate: '-5deg',
+                  cursor: 'pointer',
+                }}
+                whileTap={{
+                  cursor: 'grab'
+                }}
+                dragConstraints={{
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0
+                }}
+                dragElastic={{
+                  bottom: 1,
+                  left: 1,
+                  top: 1,
+                  right: 1,
+                }}
+              >
+                <div className='frame' css={{ width: '105%', height: '105%', transform: 'translate(-50%, -50%)', left: '50%', top: '50%', position: 'absolute', border: `1px solid ${theme.palette.text.secondary}`, opacity: 0 }}>
+                  <div css={{ width: '7px', height: '7px', background: theme.palette.text.highlight, position: 'absolute', top: '-3px', left: '-3px', borderRadius: '7px' }} />
+                  <div css={{ width: '7px', height: '7px', background: theme.palette.text.highlight, position: 'absolute', top: '-3px', right: '-3px', borderRadius: '7px' }} />
+                  <div css={{ width: '7px', height: '7px', background: theme.palette.text.highlight, position: 'absolute', bottom: '-3px', right: '-3px', borderRadius: '7px' }} />
+                  <div css={{ width: '7px', height: '7px', background: theme.palette.text.highlight, position: 'absolute', bottom: '-3px', left: '-3px', borderRadius: '7px' }} />
+                </div>
+                digital products
+              </motion.div>
+              , bring your ideas to life
+            </Text>
+          </motion.div>
+          <motion.div initial={{ opacity: 0, y: '6rem' }} animate={{ opacity: 1, y: '0rem' }} transition={{ delay: .2 }}>
+            <Text color='highlight' textAlign='center'>
+              <Typed 
+                backDelay={2000}
+                strings={[
+                  'Frontend Developer',
+                  'Backend Developer',
+                  'User Interface (UI)',
+                  'User Experience (UX)',
+                ]}
+                loop
+                typeSpeed={50}
+                backSpeed={20}
+              />
+            </Text>
+          </motion.div>
+          {/* <Link css={{width: 'fit-content'}} href='https://drive.google.com/file/d/1qnyWVCA7qJN9MdJuCjwvGznlNcXutwLZ/view?usp=sharing' passHref>
+            <a css={{width: 'fit-content'}} target='_blank' rel='noreferrer'>
+              <Button>
+                <Icon.Download css={{marginRight: '20px', color: '#FFFFFF'}} size={24} /> Curriculum Vitae
+              </Button>
+            </a>
+          </Link> */}
+        </Container.Default>
+        {/* <div css={{ height: 20 }} />
+        <motion.div css={{ position: 'sticky', top: 15, zIndex: 9999 }} initial={{ opacity: 0, y: '6rem' }} animate={{ opacity: 1, y: '0rem' }} transition={{ delay: .3 }}>
+          <Navigation />
+        </motion.div> */}
+        <div css={{ height: 200 }} />
+        <Container.Default id='projects' css={collaborateSectionCss}>
+          <div css={{ marginBottom: '40px' }}>
+            <Text as='h2' css={{ lineHeight: '28px' }}>Collaborate <Text css={{ display: 'inline' }}>to create impactfull results</Text></Text>
+          </div>
+          <CollaborateList />
+        </Container.Default>
+        <div css={[{ [`${breakpoint('md')}`]: { boxShadow: `0 0 ${thinkSectionShadow}px ${thinkSectionShadow}px ${theme.palette.background.primary}` } }, thinkSectionCss]} id='thinks' ref={thinkSectionRef}>
+          <Container.Default>
+            <div css={sectionSeparatorCss} />
+            <div css={{ padding: '100px 0' }}>
+              <Text as='h2' css={{ lineHeight: '28px' }}>Think <Text css={{ display: 'inline' }}>i really like</Text></Text>
+              <TechnologyList />
+            </div>
+          </Container.Default>
+        </div>
+      </Layout.Primary>
+    </>
+  )
+}
+
+const collaborateSectionCss = (theme: Theme) => css({
+  padding: '100px 20px',
+  top: 0,
+  zIndex: 0,
+  [`${breakpoint('md')}`]: {
+    position: 'sticky',
+    height: '100vh',
+  }
+})
+
+const thinkSectionCss = (theme: Theme) => css({
+  position: 'relative',
+  zIndex: 0,
+  background: `linear-gradient(90deg, ${theme.palette.background.primary}, ${theme.palette.background.secondary})`
+})
+
+const sectionSeparatorCss = (theme: Theme) => css({
+  height: '1px',
+  width: '100%',
+  background: 'linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(255,255,255,.2) 65%, rgba(0,0,0,0) 100%)'
 })
 
 const heroCss = css({
-  minHeight: '100vh',
+  marginTop: 150,
+  marginBottom: 20,
+  [`${breakpoint('sm')}`]: {
+    marginTop: 200,
+  },
+  [`${breakpoint('md')}`]: {
+    marginTop: 250,
+  },
+  [`${breakpoint('2xl')}`]: {
+    marginTop: 300,
+  },
   display: 'flex',
   flexDirection: 'column',
   justifyContent: 'center'

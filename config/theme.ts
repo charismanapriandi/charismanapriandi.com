@@ -34,7 +34,8 @@ export const theme: Theme = {
     text: {
       primary: '#272727',
       secondary: '#848484',
-      highlight: '#3479F7'
+      highlight: '#3479F7',
+      disabled: '#DBDBDB'
     }
   },
   ...layout
@@ -57,6 +58,7 @@ export const darkTheme: Theme = {
       primary: '#DDDDDE',
       secondary: '#A09EA2',
       highlight: '#3578F7',
+      disabled: '#4F4D51'
     }
   },
   ...layout

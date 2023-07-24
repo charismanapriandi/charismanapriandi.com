@@ -12,6 +12,14 @@ const SocialMediaList = () => {
       flexDirection: 'column',
       gap: '15px',
     }}>
+      <a href='mailto:charismanapriandi@gmail.com' target='_blank' rel='noreferrer'>
+        <IconContainerMotion initial='inactive' animate='inactive' whileHover='active'>
+          <Icon.Mail size={30} />
+          <motion.div layout transition={{type: 'tween'}} variants={(iconTextVariant as any)}>
+            <Text css={{marginLeft: '10px'}}>Email</Text>
+          </motion.div>
+        </IconContainerMotion>
+      </a>
       <a href='https://web.facebook.com/charisman.afriandi' target='_blank' rel='noreferrer'>
         <IconContainerMotion initial='inactive' animate='inactive' whileHover='active'>
           <Icon.Facebook size={30} />

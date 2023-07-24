@@ -16,6 +16,16 @@
       "url": "https://reactjs.org"
     },
     {
+      "name": "React Native",
+      "logo": "/react-js.svg",
+      "url": "https://reactnative.dev/"
+    },
+    {
+      "name": "Bit",
+      "logo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDIiIGhlaWdodD0iNDIiIHZpZXdCb3g9IjAgMCA0MiA0MiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik00MSAyMUM0MSAzMi4wNDU3IDMyLjA0NTcgNDEgMjEgNDFDOS45NTQzIDQxIDEgMzIuMDQ1NyAxIDIxQzEgOS45NTQzIDkuOTU0MyAxIDIxIDFDMzIuMDQ1NyAxIDQxIDkuOTU0MyA0MSAyMVoiIHN0cm9rZT0idXJsKCNwYWludDBfbGluZWFyXzEzNDJfMTkxMTY1KSIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPHBhdGggZD0iTTIwLjk5ODMgMzguODUxMUMzMC44NTY1IDM4Ljg1MTEgMzguODQ4MiAzMC44NTk1IDM4Ljg0ODIgMjEuMDAxMkMzOC44NDgyIDExLjE0MyAzMC44NTY1IDMuMTUxMzcgMjAuOTk4MyAzLjE1MTM3QzExLjE0MDEgMy4xNTEzNyAzLjE0ODQ0IDExLjE0MyAzLjE0ODQ0IDIxLjAwMTJDMy4xNDg0NCAzMC44NTk1IDExLjE0MDEgMzguODUxMSAyMC45OTgzIDM4Ljg1MTFaIiBmaWxsPSJ1cmwoI3BhaW50MV9saW5lYXJfMTM0Ml8xOTExNjUpIiBmaWxsLW9wYWNpdHk9IjAuNiIvPgo8cGF0aCBkPSJNMjAuOTk4MyAzOC44NTExQzMwLjg1NjUgMzguODUxMSAzOC44NDgyIDMwLjg1OTUgMzguODQ4MiAyMS4wMDEyQzM4Ljg0ODIgMTEuMTQzIDMwLjg1NjUgMy4xNTEzNyAyMC45OTgzIDMuMTUxMzdDMTEuMTQwMSAzLjE1MTM3IDMuMTQ4NDQgMTEuMTQzIDMuMTQ4NDQgMjEuMDAxMkMzLjE0ODQ0IDMwLjg1OTUgMTEuMTQwMSAzOC44NTExIDIwLjk5ODMgMzguODUxMVoiIGZpbGw9InVybCgjcGFpbnQyX2xpbmVhcl8xMzQyXzE5MTE2NSkiLz4KPHBhdGggZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiIGQ9Ik0xOS4yMjA5IDIyLjY2MThDMTkuMjIwOSAyNC42OTc4IDE4LjAwNzcgMjYuMDA4NiAxNS44MzIzIDI2LjAwODZDMTUuMDUxNCAyNi4wMDg2IDE0LjMyNjIgMjUuODU1MiAxMy43Njg0IDI1LjUzNDVDMTMuMTI3IDI1LjE3MTkgMTMuMTI3IDI0LjcxMTggMTMuMTI3IDI0LjIzNzZWMTcuMTk1NEMxMy4xMjcgMTYuNjkzNCAxMy40MzM3IDE2LjQ0MjQgMTQuMDYxMyAxNi40NDI0QzE0LjY4ODggMTYuNDQyNCAxNC45OTU2IDE2LjY5MzQgMTQuOTk1NiAxNy4xOTU0VjE5Ljg3MjhDMTUuMzQ0MiAxOS42MzU4IDE1LjgwNDQgMTkuNTI0MiAxNi4zMzQzIDE5LjUyNDJDMTguMDM1NiAxOS41MjQyIDE5LjIyMDkgMjAuNjUzOCAxOS4yMjA5IDIyLjY2MThaTTE0Ljk5NTYgMjQuMjkzNEMxNS4yMzI2IDI0LjQzMjkgMTUuNTI1NSAyNC41MDI2IDE1Ljg0NjIgMjQuNTAyNkMxNi43NTI2IDI0LjUwMjYgMTcuMzEwNCAyMy44ODkgMTcuMzEwNCAyMi43ODczQzE3LjMxMDQgMjEuNjcxNyAxNi43Mzg3IDIxLjAzMDMgMTUuODc0MSAyMS4wMzAzQzE1LjUzOTQgMjEuMDMwMyAxNS4yMzI2IDIxLjEyNzkgMTQuOTk1NiAyMS4zMDkyVjI0LjI5MzRaTTIyLjcxNDEgMTcuNjgzNUMyMi43MTQxIDE4LjMyNSAyMi4yNTM5IDE4Ljc3MTIgMjEuNjEyNSAxOC43NzEyQzIwLjk3MSAxOC43NzEyIDIwLjUxMDggMTguMzI1IDIwLjUxMDggMTcuNjgzNUMyMC41MTA4IDE3LjA0MiAyMC45NzEgMTYuNjA5NyAyMS42MTI1IDE2LjYwOTdDMjIuMjUzOSAxNi42MDk3IDIyLjcxNDEgMTcuMDQyIDIyLjcxNDEgMTcuNjgzNVpNMjIuNTQ2OCAyMC4yNzczVjI1LjIyNzdDMjIuNTQ2OCAyNS43Mjk3IDIyLjI0IDI1Ljk4MDcgMjEuNjEyNSAyNS45ODA3QzIwLjk4NDkgMjUuOTgwNyAyMC42NzgyIDI1LjcyOTcgMjAuNjc4MiAyNS4yMjc3VjIwLjI3NzNDMjAuNjc4MiAxOS43NzUyIDIwLjk4NDkgMTkuNTI0MiAyMS42MTI1IDE5LjUyNDJDMjIuMjQgMTkuNTI0MiAyMi41NDY4IDE5Ljc3NTIgMjIuNTQ2OCAyMC4yNzczWk0yOC4yMDE1IDI0LjMwNzNDMjguNzE3NCAyNC4zMDczIDI4Ljg3MDggMjQuODUxMiAyOC44NzA4IDI1LjE1OEMyOC44NzA4IDI1LjM1MzIgMjguODAxMSAyNS41NDg1IDI4LjUzNjIgMjUuNzAxOEMyOC4yMjk0IDI1Ljg4MzEgMjcuNjk5NSAyNi4wMDg2IDI3LjE1NTYgMjYuMDA4NkMyNi4xNTE2IDI2LjAwODYgMjUuNTUxOSAyNS42MDQyIDI1LjI0NTEgMjUuMDQ2NEMyNC45NjYyIDI0LjU0NDQgMjQuOTM4MyAyMy45NDQ4IDI0LjkzODMgMjMuMzAzM1YyMS4yMTE2SDI0LjQ1MDNDMjMuOTQ4MyAyMS4yMTE2IDIzLjY5NzIgMjAuOTYwNiAyMy42OTcyIDIwLjQzMDZDMjMuNjk3MiAxOS45MDA3IDIzLjk0ODMgMTkuNjQ5NyAyNC40NTAzIDE5LjY0OTdIMjQuOTM4M1YxOC40MjI2QzI0LjkzODMgMTcuOTIwNSAyNS4yNDUxIDE3LjY2OTUgMjUuODcyNyAxNy42Njk1QzI2LjUwMDIgMTcuNjY5NSAyNi44MDcgMTcuOTIwNSAyNi44MDcgMTguNDIyNlYxOS42NDk3SDI3Ljk3ODRDMjguNDgwNCAxOS42NDk3IDI4LjczMTQgMTkuOTAwNyAyOC43MzE0IDIwLjQzMDZDMjguNzMxNCAyMC45NjA2IDI4LjQ4MDQgMjEuMjExNiAyNy45Nzg0IDIxLjIxMTZIMjYuODA3VjIzLjMwMzNDMjYuODA3IDIzLjU1NDMgMjYuODA3IDIzLjkxNjkgMjYuOTMyNSAyNC4xNTRDMjcuMDMwMSAyNC4zNDkyIDI3LjIxMTQgMjQuNDMyOSAyNy40NDg0IDI0LjQzMjlDMjcuNjAxOCAyNC40MzI5IDI3Ljc1NTIgMjQuMzkxIDI3Ljg4MDcgMjQuMzYzMUMyNy45OTIzIDI0LjMzNTIgMjguMDg5OSAyNC4zMDczIDI4LjIwMTUgMjQuMzA3M1oiIGZpbGw9IiNGRUY2RkYiLz4KPHBhdGggZD0iTTYuOTE3OTEgMTQuMTEwM0M4Ljc5NzkzIDEwLjU5NTUgMTAuOTY0MSA4LjY1NDIgMTQuMjk0NSA2LjkxNzQyIiBzdHJva2U9IiNGRUYzRkUiIHN0cm9rZS13aWR0aD0iMS41IiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPGRlZnM+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQwX2xpbmVhcl8xMzQyXzE5MTE2NSIgeDE9IjM0LjY4NTUiIHkxPSIzOS4yNDgyIiB4Mj0iNS41NjI3IiB5Mj0iMy45NTE3MiIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBzdG9wLWNvbG9yPSIjQkU1MUE2Ii8+CjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzM0MDBFQSIvPgo8L2xpbmVhckdyYWRpZW50Pgo8bGluZWFyR3JhZGllbnQgaWQ9InBhaW50MV9saW5lYXJfMTM0Ml8xOTExNjUiIHgxPSIxLjEzODExIiB5MT0iLTE1LjY1MDYiIHgyPSIzOC44NDgxIiB5Mj0iMzMuMTc4MSIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPgo8c3RvcCBvZmZzZXQ9IjAuMzM4NTQyIiBzdG9wLWNvbG9yPSIjRkE3MkExIiBzdG9wLW9wYWNpdHk9IjAiLz4KPHN0b3Agb2Zmc2V0PSIxIiBzdG9wLWNvbG9yPSIjRkE3MkExIi8+CjwvbGluZWFyR3JhZGllbnQ+CjxsaW5lYXJHcmFkaWVudCBpZD0icGFpbnQyX2xpbmVhcl8xMzQyXzE5MTE2NSIgeDE9IjEzLjA4NzIiIHkxPSIxMy4xMjkxIiB4Mj0iNDAuMTA3OCIgeTI9IjQ2LjM1MTEiIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIj4KPHN0b3Agb2Zmc2V0PSIwLjAxNTYyNSIgc3RvcC1jb2xvcj0iIzJBMDBCQiIvPgo8c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiM4NjFEODkiLz4KPC9saW5lYXJHcmFkaWVudD4KPC9kZWZzPgo8L3N2Zz4K",
+      "url": "https://bit.dev/"
+    },
+    {
       "name": "Next Js",
       "logo": "/next-js.svg",
       "url": "https://nextjs.org"
@@ -61,6 +71,11 @@
       "url": "https://redux.js.org/"
     },
     {
+      "name": "MobX",
+      "logo": "https://mobx.js.org/img/mobx.png",
+      "url": "https://mobx.js.org"
+    },
+    {
       "name": "Digital Ocean",
       "logo": "/digitalocean.png",
       "url": "https://m.do.co/c/dcad4def72a4"
@@ -81,9 +96,19 @@
       "url": "https://emotion.sh/docs/introduction"
     },
     {
+      "name": "Tailwindcss",
+      "logo": "/tailwindcss.png",
+      "url": "https://tailwindcss.com/"
+    },
+    {
       "name": "Webpack",
       "logo": "/webpack.png",
       "url": "https://webpack.js.org/"
+    },
+    {
+      "name": "Babel",
+      "logo": "https://d33wubrfki0l68.cloudfront.net/377d727c8d878832f20e08939889a58bdff0b3f2/63787/img/babel.svg",
+      "url": "https://babeljs.io/"
     },
     {
       "name": "Express Js",
@@ -99,6 +124,11 @@
       "name": "PostgreSQL",
       "logo": "/postgresql.png",
       "url": "https://www.postgresql.org/"
+    },
+    {
+      "name": "MongoDB",
+      "logo": "/mongodb.png",
+      "url": "https://www.mongodb.com/"
     }
   ],
   "Applications": [
@@ -143,13 +173,6 @@
       "name": "Confluence",
       "logo": "/confluence.svg",
       "url": "https://www.atlassian.com/software/confluence"
-    }
-  ],
-  "Games": [
-    {
-      "name": "Apex Legends Mobile",
-      "logo": "/apex-legend.png",
-      "url": "https://play.google.com/store/apps/details?id=com.ea.gp.apexlegendsmobilefps&hl=en&gl=US"
     }
   ]
 }

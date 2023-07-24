@@ -1,5 +1,10 @@
 [
   {
+    "name": "Catlas",
+    "desc": "Catlas is an all-in-one POS and Inventory Management system designed to revolutionize your business operations. With Catlas, you can efficiently manage your inventory, streamline sales processes, and gain real-time insights into your business performance. Experience a seamless Point of Sale (POS) system with an intuitive interface, ensuring faster and smoother transactions.",
+    "href": "https://inventory.catlas.net"
+  },
+  {
     "name": "Keo Countries",
     "logo": "/keo-countries-api.png",
     "desc": "KeoCountries is an api to get the list of countries, states, cities, with easy queries.",

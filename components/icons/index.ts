@@ -16,6 +16,7 @@ import ChevronDown from "./ChevronDown";
 import Upload from "./Upload";
 import ExternalLink from "./ExternalLink";
 import Theme from "./Theme";
+import Mail from './Mail';
 
 export {
   Theme, 
@@ -36,4 +37,5 @@ export {
   Linkedin,
   Grid,
   ExternalLink,
+  Mail,
 };

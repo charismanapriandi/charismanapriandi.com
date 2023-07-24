@@ -11,14 +11,15 @@ const Text = styled.p<Components.Text>(({theme, as, size, textAlign, color, weig
           || `clamp(16px, 8vw, ${theme.font.size.medium})`
       : as === 'h1' && 'clamp(30px, 8vw, 60px)'
         || as === 'h2' && 'clamp(28px, 8vw, 46px)'
-        || as === 'h3' && 'clamp(24px, 8vw, 34px)'
-        || as === 'h3' && '29px'
+        || as === 'h3' && 'clamp(18px, 8vw, 28px)'
+        || as === 'h4' && '29px'
         || theme.font.size.medium,
   fontFamily: theme.font.family.poppins,
   color: !!color 
     ?  color === 'primary' && theme.palette.text.primary
       || color === 'secondary' && theme.palette.text.secondary
       || color === 'highlight' && theme.palette.text.highlight
+      || color === 'disabled' && theme.palette.text.disabled
       || theme.palette.text.primary
     : as === 'h1' 
       || as === 'h2' 

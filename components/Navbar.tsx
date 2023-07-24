@@ -16,7 +16,6 @@ const Navbar: FC<any> = () => {
   
   useClickOutside(menuRef, handleCloseMenu)
   
-  
   return (
     <>
       <Nav>
@@ -56,6 +55,7 @@ const Navbar: FC<any> = () => {
         width: '100%',
         bottom: '15px',
         pointerEvents: 'none',
+        zIndex: 9999
       }}>
         <Container.Large>
           <SocialMediaList />
@@ -114,6 +114,7 @@ const Nav = styled('nav')(({theme}) => ({
   position: 'fixed',
   width: '100%',
   padding: '15px 0',
+  zIndex: 9999
 }))
 
 export default memo(Navbar);

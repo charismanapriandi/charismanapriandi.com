@@ -78,7 +78,7 @@ declare namespace Components {
   export interface Text {
     textAlign?: 'left' | 'center' | 'right';
     size?: 'small' | 'large' | number;
-    color?: 'primary' | 'secondary' | 'highlight';
+    color?: 'primary' | 'secondary' | 'highlight' | 'disabled';
     weight?: 500 | 300;
   }
   export type Icon = {
@@ -107,7 +107,11 @@ declare namespace Components {
     export interface Project {
       logo: string;
       name: string;
+      href: string;
       description: string;
+      onExpand: () => void;
+      onCollapse: () => void;
+      isExpanded: boolean;
     }
     export interface Record {
       experienceCount: string;

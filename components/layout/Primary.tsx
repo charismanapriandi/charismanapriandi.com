@@ -10,9 +10,7 @@ interface LayoutProps {
 const Primary: FC<LayoutProps> = ({children, isPaddingTop = true}) => (
   <div css={layoutCss}>
     <Navbar />
-    <Container.Default css={{paddingTop: isPaddingTop ? '100px' : 0, flex: 1}}>
-      {children}
-    </Container.Default>
+    {children}
     <Footer />
   </div>
 )

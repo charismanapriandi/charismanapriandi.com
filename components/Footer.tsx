@@ -11,7 +11,7 @@ const Footer = () => {
       <Container.Default>
         <Icon.Logo size={50} css={logoCss} />
         <Text as='div' css={copyrightCss} size='small'>
-          &copy; 2022 Charisman Apriandi
+          &copy; 2023 Charisman Apriandi
           <div css={dotCss} />
           <Link href='https://github.com/charismanapriandi/charismanapriandi.com' passHref>
             <Anchor target='_blank' rel='noreferrer'>
@@ -25,8 +25,11 @@ const Footer = () => {
   )
 }
 
-const footerCss = css({
-  padding: '20px'
+const footerCss = (theme: Theme) => css({
+  padding: '20px',
+  position: 'relative',
+  zIndex: 2,
+  background: `linear-gradient(90deg, ${theme.palette.background.primary}, ${theme.palette.background.secondary})`
 })
 
 const logoCss = css({

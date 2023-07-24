@@ -3,9 +3,10 @@ const screenWidth = {
   md: 768,
   lg: 992,
   xl: 1200,
+  '2xl': 1500,
 }
 
-type BreakpointScreen = "sm" | "md" | "lg" | 'xl'
+type BreakpointScreen = "sm" | "md" | "lg" | 'xl' | '2xl'
 
 function breakpoint(screen: BreakpointScreen) {
   switch (screen) {
@@ -17,6 +18,8 @@ function breakpoint(screen: BreakpointScreen) {
       return `@media only screen and (min-width: ${screenWidth.lg}px)`
     case 'xl': 
       return `@media only screen and (min-width: ${screenWidth.xl}px)`
+    case '2xl': 
+      return `@media only screen and (min-width: ${screenWidth['2xl']}px)`
     default: 
       return undefined
   }

@@ -19,6 +19,7 @@ declare module '@emotion/react' {
         primary: string;
         secondary: string;
         highlight: string;
+        disabled: string;
       }
     };
     boxShadow: {
