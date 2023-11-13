@@ -114,7 +114,8 @@ const Nav = styled('nav')(({theme}) => ({
   position: 'fixed',
   width: '100%',
   padding: '15px 0',
-  zIndex: 9999
+  zIndex: 9999,
+  pointerEvents: 'none'
 }))
 
 export default memo(Navbar);

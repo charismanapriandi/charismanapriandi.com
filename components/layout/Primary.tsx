@@ -7,10 +7,12 @@ interface LayoutProps {
   isPaddingTop?: boolean
 }
 
-const Primary: FC<LayoutProps> = ({children, isPaddingTop = true}) => (
+const Primary: FC<LayoutProps> = ({children, isPaddingTop = false}) => (
   <div css={layoutCss}>
     <Navbar />
-    {children}
+    <div css={{ paddingTop: isPaddingTop ? '100px' : '' }}>
+      {children}
+    </div>
     <Footer />
   </div>
 )
